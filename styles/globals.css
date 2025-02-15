@@ -18,6 +18,7 @@ body{
 }
 
 .navbar{
+
     background-color: #000000d5;
     padding: 1rem;
     position: sticky;
@@ -25,6 +26,17 @@ body{
     box-shadow: 10px 4px 10px #2c2c2c;
     z-index: 99;
     position: relative;
+
+    background-color: #2c2c2c;
+    padding: 1rem;
+    position: sticky;
+    top: 0%;
+    box-shadow: 10px 0px 10px #2c2c2c;
+    z-index: 99;
+
+    position: relative;
+
+
 }
 
 .navbar>div{
@@ -32,17 +44,23 @@ body{
     align-items: center;
     justify-content: space-between;
 
+
 }
 
 .logo{
     color:rgb(0, 162, 255);
 }
 
-.logo span{
-    color: white;
-    
+.logo{
+    color:#058eff;
+
 }
 
+.logo span{
+    color: white;
+
+    
+}
 
 
 nav ul{
@@ -78,6 +96,7 @@ nav ul li:hover{
     color: #058eff;
 }
 
+
 nav ul li:visited{
     color: red;
 }
@@ -87,7 +106,14 @@ nav ul li:visited{
 }
 
 header{
+
     background-color: #69696931;
+
+
+    background-color: #2c2c2c31;
+
+    background-color: #2c2c2c2c;
+
    
 }
 
@@ -117,7 +143,11 @@ header{
 }
 
 .header-button-side-left button{
+
    background-color: #0066ffe0;
+
+    background-color: #058eff;
+
     border: none;
     cursor: pointer;
     padding: 0.8rem 3.8rem;
@@ -129,7 +159,11 @@ header{
 }
 
 .header-button-side-left button:hover{
+
     background-color: #0066ff;
+
+    background-color: #003cff;
+
 }
 
 .header-button-side-right{
@@ -140,7 +174,11 @@ header{
 }
 
 .eader-button-side-right img{
+
     width: 115%;
+
+    width: 115;
+
 }
 
 /*Media Queries*/
@@ -149,9 +187,11 @@ header{
         font-size: 1.2rem;
     }
 
+
     .menu-button{
         display: block;
     }
+
 
     .header-button-side{
         flex-direction: column;
@@ -187,8 +227,12 @@ header{
 
 /*Main*/
 .gray-background{
+
     background-color: #000000d0;
     box-shadow: 10px 4px 10px #2c2c2c;
+
+    background-color: #2c2c2c;
+
 }
 
 .page-inner-content{
@@ -197,6 +241,7 @@ header{
     margin: 0 auto;
 
 }
+
 
 .cols{
     display: grid;
