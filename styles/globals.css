@@ -24,14 +24,20 @@ body{
     top: 0%;
     box-shadow: 10px 0px 10px #2c2c2c;
     z-index: 99;
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> 621474b99f189396a83051fab218157d2c2292f4
 }
 
 .navbar>div{
     display: flex;
     align-items: center;
     justify-content: space-between;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 621474b99f189396a83051fab218157d2c2292f4
 }
 
 .logo{
@@ -75,16 +81,23 @@ nav ul li:hover{
     color: #058eff;
 }
 
+<<<<<<< HEAD
 nav ul li:visited{
     color: red;
 }
 
+=======
+>>>>>>> 621474b99f189396a83051fab218157d2c2292f4
 .menu-button{
     display: none;
 }
 
 header{
+<<<<<<< HEAD
     background-color: #2c2c2c31;
+=======
+    background-color: #2c2c2c2c;
+>>>>>>> 621474b99f189396a83051fab218157d2c2292f4
    
 }
 
@@ -146,15 +159,19 @@ header{
         font-size: 1.2rem;
     }
 
+<<<<<<< HEAD
     .menu-button{
         display: block;
     }
 
+=======
+>>>>>>> 621474b99f189396a83051fab218157d2c2292f4
     .header-button-side{
         flex-direction: column;
         text-align: center;
         padding-top: 4rem;
     }
+<<<<<<< HEAD
 
     nav{
         position: absolute;
@@ -193,3 +210,8 @@ header{
     margin: 0 auto;
 
 }
+=======
+}
+
+/*Header*/
+>>>>>>> 621474b99f189396a83051fab218157d2c2292f4
