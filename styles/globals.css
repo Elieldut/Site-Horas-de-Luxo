@@ -27,16 +27,6 @@ body{
     z-index: 99;
     position: relative;
 
-    background-color: #2c2c2c;
-    padding: 1rem;
-    position: sticky;
-    top: 0%;
-    box-shadow: 10px 0px 10px #2c2c2c;
-    z-index: 99;
-
-    position: relative;
-
-
 }
 
 .navbar>div{
@@ -44,11 +34,6 @@ body{
     align-items: center;
     justify-content: space-between;
 
-
-}
-
-.logo{
-    color:rgb(0, 162, 255);
 }
 
 .logo{
@@ -58,8 +43,6 @@ body{
 
 .logo span{
     color: white;
-
-    
 }
 
 
@@ -106,15 +89,7 @@ nav ul li:visited{
 }
 
 header{
-
     background-color: #69696931;
-
-
-    background-color: #2c2c2c31;
-
-    background-color: #2c2c2c2c;
-
-   
 }
 
 .header-button-side{
@@ -138,16 +113,12 @@ header{
 }
 
 .header-button-side-left p{
-    line-height: 2rem;
+    line-height: 1.7rem;
     margin-bottom: 1.5rem;
 }
 
 .header-button-side-left button{
-
-   background-color: #0066ffe0;
-
-    background-color: #058eff;
-
+    background-color: #0066ffe0;
     border: none;
     cursor: pointer;
     padding: 0.8rem 3.8rem;
@@ -159,11 +130,7 @@ header{
 }
 
 .header-button-side-left button:hover{
-
     background-color: #0066ff;
-
-    background-color: #003cff;
-
 }
 
 .header-button-side-right{
@@ -174,11 +141,11 @@ header{
 }
 
 .eader-button-side-right img{
+  width: 115%;
+}
 
-    width: 115%;
-
-    width: 115;
-
+spa{
+    margin-bottom: 50px;
 }
 
 /*Media Queries*/
