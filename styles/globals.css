@@ -445,5 +445,20 @@ spa{
     color: #ffffff;
 }
 
+/* prodoct body W99*/
+
+.bw99{
+    background-color: #8d8d8d;
+    
+}
+
+.W99{
+    padding: 3%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 40%;
+}
 
 /* Footer */
