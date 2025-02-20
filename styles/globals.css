@@ -39,7 +39,6 @@ body{
 .logo{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:#008cff;
-
 }
 
 .logo span{
@@ -391,6 +390,20 @@ spa{
     .avaliação{
         margin-bottom: 1.2rem;
     }
+
+}
+
+.label{
+    margin-right: 1%;
+    padding-left: 5%;
+    display: grid;
+}
+
+.input{
+    max-width: 120rem;
+    width: 10.9rem;
+    padding: 6%;
+    border-radius: 10px 10px 10px;
 }
 
 /* Avaliação */
