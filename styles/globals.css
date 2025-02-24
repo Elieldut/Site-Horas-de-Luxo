@@ -390,7 +390,6 @@ spa{
     .avaliação{
         margin-bottom: 1.2rem;
     }
-
 }
 
 .label{
@@ -445,10 +444,11 @@ spa{
     color: #ffffff;
 }
 
-/* prodoct body W99*/
+/* prodoct W99*/
 
 .bw99{
     background-color: #8d8d8d;
+    
     
 }
 
@@ -458,7 +458,19 @@ spa{
     align-items: center;
     justify-content: center;
     margin: auto;
-    width: 40%;
+    width: 80%;
+    
 }
+
+.main{
+    background-color: #ffffff;
+    min-width: 300px;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+    
+}
+
+/* prodoct W99*/
 
 /* Footer */
