@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="HRL.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/globals.css">
     <title>Horas de Luxo</title>
 </head>
@@ -14,9 +15,21 @@
 
     <h1 class="logo"><span>Horas </span><spa>de Luxo</spa></h1>
 
-    <p class="label"><label  for="isearch"></label>
-        <input class="input" type="text" name="Pesquisar" id="isearch" 
-        placeholder="Pesquisar" ></p>
+    <div id="container">
+        <div class="input-group">
+            <div class="input-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input 
+            id="search" 
+            type="text" 
+            class="input-field" placeholder="Pesquisar">
+        </div>
+
+     
+
+    </div>
+    
     <nav>
         <ul>
             <a href="Produtos.html">
@@ -242,6 +255,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="search navbar/src/javascript/script.js"></script>
 
     <script>
         const navbar = document.querySelector(".navbar");

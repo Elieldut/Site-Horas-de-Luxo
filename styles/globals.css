@@ -55,6 +55,35 @@ nav ul{
     align-items: center;
 }
 
+.input-group{
+    display: flex;
+    align-items: center;
+    padding: 4px 12px 4px 6px;
+    border-radius: 23px;
+    gap: 13px;
+    background-color: #ffffff;
+}
+
+.input-icon{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 100%;
+    min-height: 32px;
+    min-width: 32px;
+    color: #ffffff;
+    background-color: #0066ffe5;
+    
+}
+
+.input-field{
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    padding: 5%;
+}
+
 .nav-icon-container{
     display: flex;
     align-items: center;
