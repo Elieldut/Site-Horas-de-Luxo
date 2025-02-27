@@ -8,48 +8,192 @@
     <title>Horas de Luxo</title>
 </head>
 <body class="bw99">
-    <div class="navbar">
-        <div class="header-inner-content">
-        <h1 class="logo"><span>Horas </span>de Luxo</h1>
-        <nav>
-            <ul>
-                <a href="../index.html">
-                    <li>Home</li>
-                </a>
-                <a href="../Produtos.html">
-                    <li>Produtos</li>
-                </a>
-                <a href="../Sobre.html">
-                    <li>Sobre</li>
-                </a>
-                <a href="../Contato.html">
-                    <li>Contato</li>
-                </a>
-                <a href="../Conta.html">
-                    <li>Conta</li>
-                </a>
-            </ul>
-        </nav>
-        <div class="nav-icon-container">
-            <img src="../bag-icon-basket-icon-buy-icon-png-clipart-removebg-preview.png" alt="bag" width="210px">
-            <img src="../hamburger-removebg-preview.png" alt="hamburger" class="menu-button">
-        </div>
-      </div>
-    </div>
-<main class="main">
     
-        <img class="W99" src="../231.png">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+            body {
+                background-color: #f5f5f5;
+            }
+            .navbar {
+                background: #222;
+                padding: 15px;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+            .container {
+                max-width: 1200px;
+                margin: auto;
+                padding: 20px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.822);
+            }
+            .product-section {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .image-slider {
+                position: relative;
+                flex: 1 1 45%;
+            }
+            .product-img {
+                width: 100%;
+                border-radius: 10px;
+                display: none;
+            }
+            .product-img.active {
+                display: block;
+            }
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(0, 0, 0, 0.726);
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            .prev { left: 10px; }
+            .next { right: 10px; }
+            .product-details {
+                flex: 1 1 45%;
+                
+            }
+            .product-title {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            .product-price {
+                color: #27ae60;
+                font-size: 25px;
+                margin-bottom: 10px;
+                padding-bottom: 10%;
+            }
+            .variations {
+                margin-bottom: 20px;
+                padding: 1px;
+            }
+            .buy-button {
+                display: inline-block;
+                background: #27ae60;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 18px;
+            }
+            .buy-button:hover {
+                background: #219150;
+            }
+            .related-products {
+                margin-top: 40px;
+                display: block;
+
+            }
+
+            .cols{
+    display: grid;
+    padding: 4rem 1rem;
+}
+
+.cols-3{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.cols-3 img{
+    max-width: 100%;
+}
+
+.cols-4 img{
+    max-width: 103%;
+}
+
+.cols-4{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+            .related-list {
+                display: flex;
+                gap: 10px;
+                overflow-x: auto;
+            }
+            .related-item {
+                background: white;
+                padding: 10px;
+                border-radius: 10px;
+                text-align: center;
+                width: 150px;
+            }
+            @media (max-width: 768px) {
+                .product-section {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .product-details, .image-slider {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar"><h1 class="logo"><span>Horas </span><spa>de Luxo</spa></h1></div>
+        <div class="container">
+            <div class="product-section">
+                <div class="image-slider">
+                    <img src="../231.png" alt="Produto 1" class="product-img active">
+                    <img src="../31.png" alt="Produto 2" class="product-img">
+                    <img src="../9-2.png" alt="Produto 3" class="product-img">
+                    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                    <button class="next" onclick="changeImage(1)">&#10095;</button>
+                </div>
+                <div class="product-details">
+                    <h1 class="product-title">MODELO: W99</h1>
+                    <p class="product-price">R$ 115,50</p>
+                    <div class="variations">
+                        <label>Cor do Smartwatch:</label>
+                        <select>
+                            <option>Dourado</option>
+                            <option>Prata</option>
+                            <option>Preto</option>
+                        </select>
+                    </div>
+                    <a href="#" class="buy-button">Comprar Agora</a>
+                </div>
+            </div>
+            <div class="related-products">
+                <h2>Produtos Relacionados</h2>
+                
+        <script>
+            let currentImageIndex = 0;
+            const images = document.querySelectorAll('.product-img');
+            function changeImage(step) {
+                images[currentImageIndex].classList.remove('active');
+                currentImageIndex = (currentImageIndex + step + images.length) % images.length;
+                images[currentImageIndex].classList.add('active');
+            }
+        </script> 
+
+<a href="#">
+    <script>
+        const navbar = document.querySelector(".navbar");
+        const menuButton = document.querySelector(".menu-button");
     
-</main>
-
-<script>
-    const navbar = document.querySelector(".navbar");
-    const menuButton = document.querySelector(".menu-button");
-
-    menuButton.addEventListener('click', () => {
-        navbar.classList.toggle("show-menu");
-    });
-</script>
+        menuButton.addEventListener('click', () => {
+            navbar.classList.toggle("show-menu");
+        });
+    </script>
+</a>
 
 </body>
 </html>
