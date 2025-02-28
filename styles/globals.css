@@ -26,7 +26,6 @@ body{
     box-shadow: 10px 4px 10px #2c2c2c;
     z-index: 99;
     position: relative;
-
 }
 
 .navbar>div{
@@ -474,34 +473,21 @@ spa{
     color: #ffffff;
 }
 
+#Specc{
+    margin-top: 10%;
+}
+
+.description{
+    margin-bottom: 5%;
+}
+
 /* prodoct W99*/
 
 .bw99{
     background-color: #8d8d8d;
-    
-    
-}
-
-.W99{
-    padding: 3%;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 80%;
-    
 }
 
 
-
-.main{
-    background-color: #ffffff;
-    min-width: 300px;
-    margin-left: 10%;
-    margin-right: 10%;
-    
-    
-}
 
 /* prodoct W99*/
 

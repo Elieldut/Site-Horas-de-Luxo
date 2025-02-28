@@ -12,7 +12,6 @@
         <style>
             * {
                 margin: 0;
-                padding: 0;
                 box-sizing: border-box;
                 font-family: Arial, sans-serif;
             }
@@ -20,7 +19,7 @@
                 background-color: #f5f5f5;
             }
             .navbar {
-                background: #222;
+                background: #222222;
                 padding: 15px;
                 color: white;
                 text-align: center;
@@ -32,7 +31,7 @@
                 padding: 20px;
                 background: white;
                 border-radius: 10px;
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.822);
+                box-shadow: 0 0 15px rgb(0, 0, 0);
             }
             .product-section {
                 display: flex;
@@ -51,22 +50,29 @@
             .product-img.active {
                 display: block;
             }
+
+            h3{
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
             .prev, .next {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                background: rgba(0, 0, 0, 0.726);
-                color: white;
-                border: none;
+                background: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
                 padding: 10px;
                 cursor: pointer;
-                border-radius: 5px;
+                border-radius: 9999px;
+                
+                
             }
             .prev { left: 10px; }
             .next { right: 10px; }
+            
             .product-details {
-                flex: 1 1 45%;
-                
+                flex: 1 1 45%;     
             }
             .product-title {
                 font-size: 24px;
@@ -94,34 +100,13 @@
             .buy-button:hover {
                 background: #219150;
             }
-            .related-products {
-                margin-top: 40px;
-                display: block;
 
+            h2{
+                margin-top: 1px;
+                display: block;
+                text-align: left;
             }
 
-            .cols{
-    display: grid;
-    padding: 4rem 1rem;
-}
-
-.cols-3{
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-}
-
-.cols-3 img{
-    max-width: 100%;
-}
-
-.cols-4 img{
-    max-width: 103%;
-}
-
-.cols-4{
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-}
 
             .related-list {
                 display: flex;
@@ -144,10 +129,29 @@
                     width: 100%;
                 }
             }
+
+         
+
+            .back :hover{
+             color: #ffffff;
+             flex-direction: column-reverse;
+             
+            }
+
+            .back :visited{
+                color: #ffffff;
+                flex-direction: column-reverse;
+
+            }
+
+
         </style>
     </head>
     <body>
-        <div class="navbar"><h1 class="logo"><span>Horas </span><spa>de Luxo</spa></h1></div>
+        <div class="navbar"><h1 class="logo"><span>Horas </span><spa>de Luxo</spa><div class="back"><a class="back" href="../index.html">⇦</a></div></h1>
+        </div>
+        
+        
         <div class="container">
             <div class="product-section">
                 <div class="image-slider">
@@ -168,12 +172,67 @@
                             <option>Preto</option>
                         </select>
                     </div>
-                    <a href="#" class="buy-button">Comprar Agora</a>
+                    <a href="../Conta.html" class="buy-button">Comprar Agora</a>
                 </div>
             </div>
             <div class="related-products">
-                <h2>Produtos Relacionados</h2>
+                <h2 id="Specc"><ins>Produtos Relacionados</ins></h2>
                 
+                <div>
+                    <div class="page-inner-content">
+        
+                        <div class="cols cols-4">
+                            <img class="specific" src="../IMG_2150.PNG" width="500px">
+                           <img class="specific" src="../gs10 mini.jpg" width="500px">
+                         
+                        </div>
+                        
+                    </div>
+                </div>
+                <div>
+
+                    <div>
+                        <h2 class="description"><ins>Descrição do Produto</ins></h2>
+                        <p >O Smartwatch W99 da Microwear é um dispositivo que combina tecnologia avançada com design elegante, oferecendo uma variedade de funcionalidades para atender às necessidades do dia a dia.
+
+                            <h3>Design e Construção</h3>
+                            
+                            Com uma caixa de alumínio disponível nas cores preta, prata e dourada, o W99 apresenta um visual sofisticado e durável. A pulseira de silicone, disponível em preto, branco e rosa, garante conforto durante o uso prolongado. O relógio possui um tamanho de 45mm, adequado para diferentes estilos e preferências. 
+                            LXWATCHBRASIL.COM.BR
+                            
+                            <h3>Tela e Interface</h3>
+                            
+                            Equipado com uma tela IPS de 1,93 polegadas e resolução de 320x380 pixels, o W99 oferece imagens nítidas e cores vibrantes. O dispositivo permite personalização com mais de 500 watch faces disponíveis através do aplicativo MActive Pro, além da possibilidade de inserir fotos e vídeos pessoais como plano de fundo. 
+                            KABUM.COM.BR
+                            
+                            <h3>Desempenho e Armazenamento</h3>
+                            
+                            O W99 é alimentado pelo processador Jieli AC7012A7S, garantindo desempenho rápido e eficiente. Possui 256 MB de memória e 1 GB de armazenamento interno, permitindo que o usuário armazene músicas diretamente no relógio e as reproduza sem a necessidade de um smartphone. Além disso, é possível conectar fones de ouvido Bluetooth diretamente ao smartwatch para uma experiência de áudio sem fio. 
+                            SMARTTECHWEAR.COM.BR
+                            
+                            <h3>Conectividade e Funcionalidades</h3>
+                            
+                            Através do aplicativo MActive Pro, o W99 sincroniza facilmente com smartphones, permitindo receber notificações de mensagens, chamadas e aplicativos diretamente no pulso. O smartwatch também possui função de chamadas, permitindo fazer e receber ligações sem precisar do celular. Outras funcionalidades incluem controle remoto de câmera e música, calculadora, cronômetro, assistente de voz e integração com o ChatGPT para suporte inteligente. 
+                            LXWATCHBRASIL.COM.BR
+                            
+                            <h3>Monitoramento de Saúde e Atividade Física</h3>
+                            
+                            O W99 oferece recursos abrangentes de monitoramento de saúde, incluindo monitoramento de sono, frequência cardíaca, pressão arterial e modos de saúde. Para os entusiastas de atividades físicas, o smartwatch dispõe de 11 modos de esporte, auxiliando no acompanhamento e otimização dos treinos. Além disso, o GPS integrado ao celular fornece dados precisos sobre trajetos e atividades ao ar livre. 
+                            LXWATCHBRASIL.COM.BR
+                            
+                            <h3>Resistência e Bateria</h3>
+                            
+                            Com certificação IP68, o W99 é resistente à água e poeira, adequado para uso diário e atividades ao ar livre. A bateria de 250 mAh oferece uma duração considerável, e o carregamento por indução torna o processo simples e prático. 
+                            LXWATCHBRASIL.COM.BR
+                            
+                            <h3>Recursos Adicionais</h3>
+                            
+                            O smartwatch inclui funcionalidades como bússola integrada, leitor de e-books, gravador de voz e função de dois gestos para atender ligações, proporcionando uma experiência de uso mais intuitiva e completa. 
+                            SMARTTECHWEAR.COM.BR
+                            
+                            Em resumo, o Smartwatch W99 da Microwear é uma opção robusta e versátil para quem busca um dispositivo que alie tecnologia avançada, design elegante e funcionalidades abrangentes para o cotidiano.</p>
+                    </div>
+
         <script>
             let currentImageIndex = 0;
             const images = document.querySelectorAll('.product-img');
@@ -183,6 +242,30 @@
                 images[currentImageIndex].classList.add('active');
             }
         </script> 
+
+<footer class="gray-background">
+    <div class="page-inner-content footer-content">
+        <div class="logo-footer">
+            <h1 class="logo"><span>Horas </span><spa>de Luxo</spa></h1><br>
+            <p>O objetivo da nossa loja é proporcionar aos nossos clientes uma experiência única ao adquirir nossos produtos tecnológicos, oferecendo uma ampla variedade de modelos de alta qualidade que atendem a diferentes estilos e necessidades.</p>
+        </div>
+
+        <div class="links">
+            <h3>Contatos:</h3>
+            <p>Clique nos ícones abaixo</p>
+            <br>
+            <ul>
+                <p>
+                <a href="https://www.instagram.com/horas_de_luxo/" target="_blank"><img src="../instagram.png" width="40px"></a>
+
+
+                        <a href="https://api.whatsapp.com/send/?phone=31996438126&text&type=phone_number&app_absent=0" target="_blank"><img src="../whatsapp.png" width="40px"></a> 
+                </p>
+                
+            </ul>
+        </div>
+    </div>
+</footer>
 
 <a href="#">
     <script>
