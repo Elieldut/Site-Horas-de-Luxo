@@ -26,7 +26,7 @@
                 font-size: 20px;
             }
             .container {
-                
+                max-width: 1200%;
                 margin: auto;
                 padding: 10px;
                 background: rgb(255, 255, 255);
@@ -43,6 +43,17 @@
                     margin-left: 20px;
                     margin-right: 20px;
                 }
+
+
+
+                .product-section, main {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .product-details, .image-slider {
+                    width: 80%;
+                }
+            
             }
             .product-section {
                 display: flex;
@@ -174,13 +185,6 @@
            #textfooter{
             color: white;
            }
-
-           @media (max-width:200px) {
-                .container{
-                    margin-left: 20px;
-                    margin-right: 20px;
-                }
-            }
 
         </style>
     </head>
