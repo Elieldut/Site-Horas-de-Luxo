@@ -7,44 +7,335 @@
     <link rel="stylesheet" href="../styles/globals.css">
     <title>Horas de Luxo</title>
 </head>
-<body>
-    <div class="navbar">
-        <div class="header-inner-content">
-        <h1 class="logo"><span>Horas </span>de Luxo</h1>
-        <nav>
-            <ul>
-                <a href="index.html">
-                    <li>Home</li>
-                </a>
-                <a href="Produtos.html">
-                    <li>Produtos</li>
-                </a>
-                <a href="Sobre.html">
-                    <li>Sobre</li>
-                </a>
-                <a href="Contato.html">
-                    <li>Contato</li>
-                </a>
-                <a href="Conta.html">
-                    <li>Conta</li>
-                </a>
-            </ul>
-        </nav>
-        <div class="nav-icon-container">
-            <img src="../bag-icon-basket-icon-buy-icon-png-clipart-removebg-preview.png" alt="bag" width="210px">
-            <img src="../hamburger-removebg-preview.png" alt="hamburger" class="menu-button">
+<body class="bw99">
+    
+        <style>
+            * {
+               
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+            body {
+                background-color: #ffffff;
+            }
+            .navbar {
+                background: #222222;
+                padding: 15px;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+            .container {
+                margin: auto;
+                padding: 10px;
+                background: rgb(255, 255, 255);
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius:10px;
+                border-bottom-right-radius: 10px;
+                overflow: hidden ;
+                box-shadow:-0.11px 1px 1px 1px #ffffff;
+               
+            }
+
+
+            @media (min-width:200px) {
+                .container{
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    
+                }
+
+                
+
+                .product-section, main {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .product-details, .image-slider {
+                    width: 100%;
+                }
+            
+            }
+            .product-section {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                padding: 10px;
+            }
+            .image-slider {
+                position: relative;
+                flex: 1 1 45%;
+            }
+            .product-img {
+                width: 100%;
+                border-radius: 10px;
+                display: none;
+            }
+            .product-img.active {
+                display: block;
+            }
+
+            .gray-background{
+            color: white;
+            box-shadow: none;
+            background-color: #444444; 
+            margin:-12px;
+            }
+
+            h2,h3,p{
+                margin-left: 10px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 9999px;
+                
+                
+            }
+            .prev { left: 10px; }
+            .next { right: 10px; }
+            
+            .product-details {
+                flex: 1 1 45%;     
+            }
+            .product-title {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            .product-price {
+                color: #27ae60;
+                font-size: 25px;
+                margin-bottom: 10px;
+                padding-bottom: 10%;
+            }
+            .variations {
+                margin-bottom: 20px;
+                padding: 1px;
+            }
+            .buy-button {
+                display: inline-block;
+                background: #27ae60;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 18px;
+            }
+            .buy-button:hover {
+                background: #219150;
+            }
+
+            h2{
+                margin-top: 1px;
+                display: block;
+                text-align: left;
+            }
+
+
+            .related-list {
+                display: flex;
+                gap: 10px;
+                overflow-x: auto;
+            }
+            .related-item {
+                background: white;
+                padding: 10px;
+                border-radius: 10px;
+                text-align: center;
+                width: 150px;
+            }
+            @media (max-width: 768px) {
+                .product-section {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .product-details, .image-slider {
+                    width: 100%;
+                }
+            }
+
+         
+            .back{
+                font-size: 2rem;
+            }
+
+            
+
+            a:hover{
+                color: #dfdfdf;
+                flex-direction: column-reverse;
+               
+            
+            }
+
+    
+
+           main{
+            background-color: #444444;
+           }
+           
+           #textfooter{
+            color: white;
+           }
+
+           a{
+            text-decoration: none;
+            cursor: pointer ;
+            color: #ffffff;
+            transform: translateY(-10px);
+            transition:1ms;
+            
+           }
+
+        </style>
+    </head>
+    <body>
+        <div class="navbar"><h1 class="logo"><span>Horas </span><spa>de Luxo</spa><div class="back"><a class="back" href="../index.html">⇦</a></div></h1>
         </div>
-      </div>
-    </div>
-
-    <script>
-        const navbar = document.querySelector(".navbar");
-        const menuButton = document.querySelector(".menu-button");
-
-        menuButton.addEventListener('click', () => {
-            navbar.classList.toggle("show-menu");
-        });
-    </script>
+        
+        
+        <main>
+            <div class="container">
+                <div class="product-section">
+                    <div class="image-slider">
+                        <img src="../9-2.png" alt="Produto 1" class="product-img active">
+                        <img src="../31.png" alt="Produto 2" class="product-img">
+                        <img src="../9-2.png" alt="Produto 3" class="product-img">
+                        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                        <button class="next" onclick="changeImage(1)">&#10095;</button>
+                    </div>
+                    <div class="product-details">
+                        <h1 class="product-title">MODELO: ULTRA 9 MAX</h1>
+                        <p class="product-price">R$ 115,50</p>
+                        <div class="variations">
+                            <label>Cor do Smartwatch:</label>
+                            <select>
+                                <option>Dourado</option>
+                                <option>Prata</option>
+                                <option>Preto</option>
+                            </select>
+                        </div>
+                        <a href="../Conta.html" class="buy-button">Comprar Agora</a>
+                    </div>
+                </div>
+                <div class="related-products">
+                    <h2 id="Specc"><ins>Produtos Relacionados</ins></h2>
+            
+                    <div>
+                        <div class="page-inner-content">
+            
+                            <div class="cols cols-4">
+                                <img class="specific" src="../IMG_2150.PNG" width="500px">
+                               <img class="specific" src="../gs10 mini.jpg" width="500px">
+            
+                            </div>
+            
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h2 class="description"><ins>Descrição do Produto</ins></h2>
+                            <p >O Smartwatch W99 da Microwear é um dispositivo que combina tecnologia avançada com design elegante, oferecendo uma variedade de funcionalidades para atender às necessidades do dia a dia.
+                                <h3>Design e Construção</h3>
+            
+                                <p>
+                                    Com uma caixa de alumínio disponível nas cores preta, prata e dourada, o W99 apresenta um visual sofisticado e durável. A pulseira de silicone, disponível em preto, branco e rosa, garante conforto durante o uso prolongado. O relógio possui um tamanho de 45mm, adequado para diferentes estilos e preferências.
+                                    LXWATCHBRASIL.COM.BR
+                                </p>
+            
+                                <h3>Tela e Interface</h3>
+            
+                                <p>
+                                    Equipado com uma tela IPS de 1,93 polegadas e resolução de 320x380 pixels, o W99 oferece imagens nítidas e cores vibrantes. O dispositivo permite personalização com mais de 500 watch faces disponíveis através do aplicativo MActive Pro, além da possibilidade de inserir fotos e vídeos pessoais como plano de fundo.
+                                    KABUM.COM.BR
+                                </p>
+            
+                                <h3>Desempenho e Armazenamento</h3>
+            
+                                <p>
+                                    O W99 é alimentado pelo processador Jieli AC7012A7S, garantindo desempenho rápido e eficiente. Possui 256 MB de memória e 1 GB de armazenamento interno, permitindo que o usuário armazene músicas diretamente no relógio e as reproduza sem a necessidade de um smartphone. Além disso, é possível conectar fones de ouvido Bluetooth diretamente ao smartwatch para uma experiência de áudio sem fio.
+                                    SMARTTECHWEAR.COM.BR
+                                </p>
+            
+                                <h3>Conectividade e Funcionalidades</h3>
+            
+                                <p>
+                                    Através do aplicativo MActive Pro, o W99 sincroniza facilmente com smartphones, permitindo receber notificações de mensagens, chamadas e aplicativos diretamente no pulso. O smartwatch também possui função de chamadas, permitindo fazer e receber ligações sem precisar do celular. Outras funcionalidades incluem controle remoto de câmera e música, calculadora, cronômetro, assistente de voz e integração com o ChatGPT para suporte inteligente.
+                                    LXWATCHBRASIL.COM.BR
+                                </p>
+            
+                                <h3>Monitoramento de Saúde e Atividade Física</h3>
+            
+                                <p>
+                                    O W99 oferece recursos abrangentes de monitoramento de saúde, incluindo monitoramento de sono, frequência cardíaca, pressão arterial e modos de saúde. Para os entusiastas de atividades físicas, o smartwatch dispõe de 11 modos de esporte, auxiliando no acompanhamento e otimização dos treinos. Além disso, o GPS integrado ao celular fornece dados precisos sobre trajetos e atividades ao ar livre.
+                                    LXWATCHBRASIL.COM.BR
+                                </p>
+            
+                                <h3>Resistência e Bateria</h3>
+            
+                                <p>
+                                    Com certificação IP68, o W99 é resistente à água e poeira, adequado para uso diário e atividades ao ar livre. A bateria de 250 mAh oferece uma duração considerável, e o carregamento por indução torna o processo simples e prático.
+                                    LXWATCHBRASIL.COM.BR
+                                </p>
+            
+                                <h3>Recursos Adicionais</h3>
+            
+                                <p>
+                                    O smartwatch inclui funcionalidades como bússola integrada, leitor de e-books, gravador de voz e função de dois gestos para atender ligações, proporcionando uma experiência de uso mais intuitiva e completa.
+                                    SMARTTECHWEAR.COM.BR
+                                    Em resumo, o Smartwatch W99 da Microwear é uma opção robusta e versátil para quem busca um dispositivo que alie tecnologia avançada, design elegante e funcionalidades abrangentes para o cotidiano.
+                                </p>
+                        </div>
+            <script>
+                let currentImageIndex = 0;
+                const images = document.querySelectorAll('.product-img');
+                function changeImage(step) {
+                    images[currentImageIndex].classList.remove('active');
+                    currentImageIndex = (currentImageIndex + step + images.length) % images.length;
+                    images[currentImageIndex].classList.add('active');
+                }
+            </script> 
+            <br>
+            <footer class="gray-background">
+                <div class="page-inner-content footer-content">
+            <div class="logo-footer">
+                <h1 class="logo"><span>Horas </span><spa>de Luxo</spa></h1><br>
+                <p id="textfooter">O objetivo da nossa loja é proporcionar aos nossos clientes uma experiência única ao adquirir nossos produtos tecnológicos, oferecendo uma ampla variedade de modelos de alta qualidade que atendem a diferentes estilos e necessidades.</p>
+            </div>
+            <div class="links">
+                <h3>Contatos:</h3>
+                <p id="textfooter">Clique nos ícones abaixo</p>
+                <br>
+                <ul>
+                    <p>
+                    <a href="https://www.instagram.com/horas_de_luxo/" target="_blank"><img src="../instagram.png" width="40px"></a>
+                            <a href="https://api.whatsapp.com/send/?phone=31996438126&text&type=phone_number&app_absent=0" target="_blank"><img src="../whatsapp.png" width="40px"></a>
+                    </p>
+            
+                </ul>
+            </div>
+                </div>
+            </footer>
+            
+            <a href="#">
+                <script>
+            const navbar = document.querySelector(".navbar");
+            const menuButton = document.querySelector(".menu-button");
+            menuButton.addEventListener('click', () => {
+                navbar.classList.toggle("show-menu");
+            });
+                </script>
+            </a>
+        </main>
 
 </body>
 </html>

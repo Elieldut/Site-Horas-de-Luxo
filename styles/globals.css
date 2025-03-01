@@ -223,6 +223,14 @@ spa{
 
 }
 
+a{
+    text-decoration: none;
+}
+
+.product a:visited{
+    color: rgb(0, 31, 134);
+}
+
 /*Header*/
 
 /*Main*/
