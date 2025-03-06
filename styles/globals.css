@@ -64,7 +64,7 @@ nav ul{
     background-color: #ffffff;
 
 }
-
+/* No use config of search
 .input-icon{
     display: flex;
     align-items: center;
@@ -83,7 +83,7 @@ nav ul{
     padding: 5%;
     border-radius: 23px;
 }
-
+*/
 .nav-icon-container{
     display: flex;
     align-items: center;
@@ -202,8 +202,8 @@ spa{
     nav{
         position: absolute;
         background-color: #000000d5;
-        width: 100%;
-        top: 66px;
+        width: 92%;
+        top: 69px;
         display: none;
     }
 
@@ -216,6 +216,7 @@ spa{
     }
 
     nav ul li{
+        align-items: center;
         text-align: center;
         padding: 0.8rem;
         font-size: 1rem;
@@ -491,4 +492,125 @@ a{
 /* prodoct W99*/
 
 /* Footer */
+
+/*Config do menu seta*/
+
+.dropdown-menu {
+    display:none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    transition: max-height 1s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.dropdown-menu.show {
+    display: block;
+    max-height: 800px;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-toggle-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-left: 15px;
+}
+
+.dropdown-toggle {
+   
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg);
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.dropdown-toggle.active {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.dropdown-rect {
+    width: 50px; /* Increased width to resemble a search bar */
+    height: 30px; /* Adjusted height */
+    border-radius: 8px;
+    background-color: white;
+    z-index: 1;
+    cursor: pointer;
+    display: flex; /* Use flexbox to center the icon */
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+}
+
+.dropdown-menu {
+    text-align: center;
+    top: 40px; /* Adjusted to be directly below the rectangle */
+    left: 0;
+    transform: translateX(0);
+    padding: 20px;
+}
+
+.scroll-box {
+width: 200px;
+height: 150px;
+overflow-y: auto; /* Adiciona barra de rolagem vertical */
+padding: 10px;
+}
+
+@media(min-width:200px){
+.dropdown-menu {                          
+text-align:center;                          
+top: 50px;                          
+left: 36%;                          
+transform: translateX(-50%);                          
+padding: 10px;               
+}
+
+.dropdown-toggle-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-left: 15px;
+}
+
+}
+
+
+@media(max-width:1200px){
+.dropdown-menu {                          
+text-align:center;                          
+top: 50px;                          
+left: 29.9%;                          
+transform: translateX(-46%);                          
+padding: 10px;            
+}
+
+.dropdown-toggle-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-left: 16px;
+    justify-content: space-between;
+}
+}
+
+/*Config do menu seta*/
+
 

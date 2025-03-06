@@ -11,10 +11,34 @@
 </head>
 <body class="tubody">
     <div class="navbar">
-    <div class="header-inner-content">
+        <div class="header-inner-content">
+            <div style="display: flex; align-items: center;">
+                <h1 class="logo"><span>Horas </span><spa>de Luxo</spa></h1>
+                <div class="dropdown-toggle-container">
+                    <div class="dropdown-rect" id="dropdownRect">
+                        <i class="fa-solid fa-chevron-right dropdown-toggle" id="dropdownToggle"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-menu" id="myDropdown" >
+                <div class="scroll-box">
+                    <a href="#">Opção 1</a>
+                    <a href="#">Opção 2</a>
+                    <a href="#">Opção 3 wrwertwer</a>
+                    <a href="#">Opção 1</a>
+                    <a href="#">Opção 2</a>
+                    <a href="#">Opção 3</a>
+                    <a href="#">Opção 1</a>
+                    <a href="#">Opção 2</a>
+                    <a href="#">Opção 3</a>
+                    <a href="#">Opção 1</a>
+                    <a href="#">Opção 2</a>
+                    <a href="#">Opção 3</a>
+                    <a href="#">Opção 1</a>
 
-    <h1 class="logo"><span>Horas </span><spa>de Luxo</spa></h1>
-    
+                </div>
+            </div>
+    <!-- No use config of search
     <div id="container">
         <div class="input-group">
             <div class="input-icon">
@@ -26,9 +50,8 @@
             class="input-field" 
             placeholder="Pesquisar">
         </div>
-
-    </div>
-    
+    -->
+   
     <nav>
         <ul>
             <a href="Produtos.html">
@@ -262,11 +285,29 @@
         </div>
     </footer>
 
-    <script src="search navbar/src/javascript/script.js"></script>
-
     <script>
-        const navbar = document.querySelector(".navbar");
-        const menuButton = document.querySelector(".menu-button");
+        let navbar = document.querySelector(".navbar");
+        let menuButton = document.querySelector(".menu-button");
+        let dropdownToggle = document.getElementById("dropdownToggle");
+        let dropdownMenu = document.getElementById("myDropdown");
+        let dropdownRect = document.getElementById("dropdownRect");
+
+        menuButton.addEventListener('click', () => {
+            navbar.classList.toggle("show-menu");
+        });
+
+        function toggleDropdown() {
+            dropdownMenu.classList.toggle("show");
+            dropdownToggle.classList.toggle("active");
+        }
+
+        dropdownRect.addEventListener('click', toggleDropdown); // Add click listener to the rectangle
+    </script>
+
+    <script src="search navbar/src/javascript/script.js"></script>
+    <script>
+        let navbar = document.querySelector(".navbar");
+        let menuButton = document.querySelector(".menu-button");
 
         menuButton.addEventListener('click', () => {
             navbar.classList.toggle("show-menu");
