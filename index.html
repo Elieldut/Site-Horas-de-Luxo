@@ -164,15 +164,19 @@
             <div class="cols cols-4">
 
                 <div class="product">
-                    <img src="S10.jpg" width="300px">
-                    <p class="product-name">MODELO: S10 Microwear </p>
+                    <a href="../Site-Horas-de-Luxo/pagprincipal/S10MICROWEAR.html">
+                        <img src="S10.jpg" width="300px">
+                        <p class="product-name">MODELO: S10 Microwear </p>
+                    </a>
                     <p class="rate"><spann>&#9733;&#9733;&#9733;&#9733;&#9734;</spann></p>
                     <p class="product-price"></p>
                 </div>
 
                 <div class="product">
-                    <img src="IMG_1210.JPG" width="300px">
-                    <p class="product-name">MODELO: ROYALS CLASSIC</p>
+                    <a href="pagprincipal/ROYALS.html">
+                        <img src="IMG_1210.JPG" width="300px">
+                        <p class="product-name">MODELO: ROYALS CLASSIC</p>
+                    </a>
                     <p class="rate"><spann>&#9733;&#9733;&#9733;&#9733;&#9734;</spann></p>
                     <p class="product-price"></p>
                 </div>
@@ -286,8 +290,8 @@
     </footer>
 
     <script>
-        let navbar = document.querySelector(".navbar");
         let menuButton = document.querySelector(".menu-button");
+        let navbar = document.querySelector(".navbar");
         let dropdownToggle = document.getElementById("dropdownToggle");
         let dropdownMenu = document.getElementById("myDropdown");
         let dropdownRect = document.getElementById("dropdownRect");
@@ -300,18 +304,17 @@
             dropdownMenu.classList.toggle("show");
             dropdownToggle.classList.toggle("active");
         }
-
+        // menuButton.addEventListener('click', () => {
+        //     navbar.classList.toggle("show-menu");
+        // });
+        
         dropdownRect.addEventListener('click', toggleDropdown); // Add click listener to the rectangle
     </script>
 
-    <script src="search navbar/src/javascript/script.js"></script>
     <script>
-        let navbar = document.querySelector(".navbar");
-        let menuButton = document.querySelector(".menu-button");
+        // let navbar = document.querySelector(".navbar");
+        // let menuButton = document.querySelector(".menu-button");
 
-        menuButton.addEventListener('click', () => {
-            navbar.classList.toggle("show-menu");
-        });
     </script>
 </body>
 </html>

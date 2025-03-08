@@ -1,7 +1,7 @@
-const creditCardBtn = document.getElementById('credit-card-btn');
-const pixBtn = document.getElementById('pix-btn');
-const paymentDetails = document.getElementById('payment-details');
-const confirmPaymentBtn = document.getElementById('confirm-payment');
+let creditCardBtn = document.getElementById('credit-card-btn');
+let pixBtn = document.getElementById('pix-btn');
+let paymentDetails = document.getElementById('payment-details');
+let confirmPaymentBtn = document.getElementById('confirm-payment');
 
 creditCardBtn.addEventListener('click', () => {
     paymentDetails.innerHTML = `
