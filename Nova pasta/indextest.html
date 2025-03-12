@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="HRL.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/globals.css">
+    <title>Horas de Luxo</title>
+
+    
+
+</head>
+<body class="tubody">
+    <div class="navbar">
+        <div class="header-inner-content">
+            <div style="display: flex; align-items: center;">
+                <h1 class="logo"><span>Horas </span><spa>de Luxo</spa></h1>
+                <div class="dropdown-toggle-container">
+                    <div class="dropdown-rect" id="dropdownRect">
+                        <i class="fa-solid fa-chevron-right dropdown-toggle" id="dropdownToggle"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-menu" id="myDropdown" >
+                <div class="scroll-box">
+                    <strong><ins>Categorias</ins></strong>
+                    <a href="#">Custo benefício</a>
+                    <a href="#">Kit de Smartwatch <br>+ Pulseiras</a>
+                    <a href="#">Microwear</a>
+                    <a href="#">WearZone</a>
+                    <a href="#">Xwear</a>
+                    <a href="#">Mibro</a>
+                    <a href="#">Haylou</a>
+                    
+
+                </div>
+            </div>
+    <!-- No use config of search
+    <div id="container">
+        <div class="input-group">
+            <div class="input-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input 
+            id="search" 
+            type="text" 
+            class="input-field" 
+            placeholder="Pesquisar">
+        </div>
+    -->
+   
+    <nav>
+        <ul>
+            <a href="Produtos.html" target="_blank">
+                <li>Produtos</li>
+            </a>
+            <a href="Sobre.html">
+                <li>Sobre</li>
+            </a>
+            <a href="Contato.html">
+                <li>Contato</li>
+            </a>
+
+            <a href="Conta.html">
+                <li>Conta</li>
+            </a>
+        </ul>
+    </nav>
+    <div class="nav-icon-container">
+        <img src="bag-icon-basket-icon-buy-icon-png-clipart-removebg-preview.png" alt="bag" width="210px">
+        <img src="hamburger-removebg-preview.png" alt="hamburger" class="menu-button">
+    </div>
+  </div>
+</div>
+
+
+    
+        <div class="slider">
+            <div class="slides">
+            <!-- Radio Buttons -->
+             <input type="radio" name="radio-btn" id="radio1">
+             <input type="radio" name="radio-btn" id="radio2">
+             <input type="radio" name="radio-btn" id="radio3">
+             <input type="radio" name="radio-btn" id="radio4">
+            <!-- Fim Radio Buttons -->
+            <!-- Slide images -->
+                 <div class="slide first">
+                    <img src="IMG_1398.JPG" alt="imagem 1">
+                 </div>
+                 <div class="slide">
+                    <img src="gs10 mini.jpg" alt="imagem 2">
+                 </div>
+                 <div class="slide">
+                    <img src="IMG_2150.PNG" alt="imagem 3">
+                 </div>
+                 <div class="slide">
+                    <img src="43.png" alt="imagem 4">
+                 </div>
+
+                 <!-- Fim Slide images -->
+                 <!-- Navigation auto -->
+                  <div class="navigation-auto">
+                      <div class="auto-btn1"></div>
+                      <div class="auto-btn2"></div>
+                      <div class="auto-btn3"></div>
+                      <div class="auto-btn4"></div>
+                  </div>
+            </div>
+        
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+    
+
+    <script>
+        let menuButton = document.querySelector(".menu-button");
+        let navbar = document.querySelector(".navbar");
+        let dropdownToggle = document.getElementById("dropdownToggle");
+        let dropdownMenu = document.getElementById("myDropdown");
+        let dropdownRect = document.getElementById("dropdownRect");
+
+        menuButton.addEventListener('click', () => {
+            navbar.classList.toggle("show-menu");
+        });
+
+        function toggleDropdown() {
+            dropdownMenu.classList.toggle("show");
+            dropdownToggle.classList.toggle("active");
+        }
+        // menuButton.addEventListener('click', () => {
+        //     navbar.classList.toggle("show-menu");
+        // });
+        
+        dropdownRect.addEventListener('click', toggleDropdown); // Add click listener to the rectangle
+    </script>
+   <script src="script.js"></script>
+    <script>
+        // let navbar = document.querySelector(".navbar");
+        // let menuButton = document.querySelector(".menu-button");
+
+    </script>
+</body>
+</html>
