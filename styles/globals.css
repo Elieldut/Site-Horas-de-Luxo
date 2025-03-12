@@ -194,7 +194,7 @@ nav ul{
     
 } 
 
-/* Esse navigation-auto e a config do circulo */
+/* Esse navigation-auto e a config do circulo
 .manual-navigation{
     position: absolute;
     width: 100%;
@@ -204,7 +204,7 @@ nav ul{
     
 }
 
-/* Esse navigation-auto e para a config da cor dentro do circulo  */
+Esse navigation-auto e para a config da cor dentro do circulo 
 .navigation-auto{
     position: absolute;
     width: 100%;
@@ -212,7 +212,7 @@ nav ul{
     display: flex;
     justify-content: center;
    
-}
+} */
 
 .slide img{
     width: 440px;
@@ -255,31 +255,31 @@ nav ul{
 }
 
 
-.manual-btn{
+/* .manual-btn{
     border: 2px solid rgb(0, 0, 0);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
-}
+} */
 
 .manual-btn:not(:last-child){
     margin-right: 40px;
 }
 
-.manual-btn:hover{
+/* .manual-btn:hover{
     background-color: rgb(0, 0, 0);
-}
+} */
 
 
 
-.navigation-auto div{
+/* .navigation-auto div{
     border-radius: 3px solid rgb(0, 0, 0);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
     transition: 3s;
-}
+} */
 
 
 .navigation-auto div:not(:last-child){
