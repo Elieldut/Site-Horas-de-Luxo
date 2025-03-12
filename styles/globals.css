@@ -184,16 +184,17 @@ nav ul{
 }
 
 
-
+/* Média para tela de celular */
 @media(max-width:800px){
     .slider{
     margin: 0 auto;
     width: 100%;
     height: 200px;
     overflow: hidden;
-    min-width: 300px;
+    
 } 
 
+/* Esse navigation-auto e a config do circulo */
 .manual-navigation{
     position: absolute;
     width: 100%;
@@ -203,6 +204,7 @@ nav ul{
     
 }
 
+/* Esse navigation-auto e para a config da cor dentro do circulo  */
 .navigation-auto{
     position: absolute;
     width: 100%;
@@ -231,7 +233,7 @@ nav ul{
 }
 
 #radio4:checked ~ .first{
-    margin-left: -300%;
+    margin-left: -297%;
 }
 
 }
