@@ -215,7 +215,7 @@ nav ul{
 }
 
 .slide img{
-    width: 401px;
+    width: 400px;
     transform: translateY(-44%);
     
 }
@@ -233,7 +233,7 @@ nav ul{
 }
 
 #radio4:checked ~ .first{
-    margin-left: -300%;
+    margin-left: -200%;
 }
 
 }
