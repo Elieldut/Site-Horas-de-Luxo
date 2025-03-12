@@ -225,7 +225,7 @@ nav ul{
 }
 
 #radio2:checked ~ .first{
-    margin-left: -105%;
+    margin-left: -115%;
 }
 
 #radio3:checked ~ .first{
