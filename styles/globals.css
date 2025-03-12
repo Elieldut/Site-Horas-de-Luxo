@@ -146,7 +146,7 @@ nav ul{
 .manual-navigation{
     position: absolute;
     width: 100%;
-    margin-top: -90px;
+    margin-top: -20px;
     display: flex;
     justify-content: center;
     
@@ -155,7 +155,7 @@ nav ul{
 .navigation-auto{
     position: absolute;
     width: 100%;
-    margin-top: 312px;
+    margin-top:382px;
     display: flex;
     justify-content: center;
    
@@ -198,7 +198,7 @@ nav ul{
 .manual-navigation{
     position: absolute;
     width: 100%;
-    margin-top: -230px;
+    margin-top: -175px;
     display: flex;
     justify-content: center;
     
@@ -208,7 +208,7 @@ nav ul{
 .navigation-auto{
     position: absolute;
     width: 100%;
-    margin-top: 172px;
+    margin-top: 227px;
     display: flex;
     justify-content: center;
    
@@ -256,7 +256,7 @@ nav ul{
 
 
 .manual-btn{
-    border: 2px solid rgb(25, 0, 255);
+    border: 2px solid rgb(0, 0, 0);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -274,7 +274,7 @@ nav ul{
 
 
 .navigation-auto div{
-    border-radius: 2px solid rgb(0, 110, 255);
+    border-radius: 3px solid rgb(0, 110, 255);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -287,19 +287,19 @@ nav ul{
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: rgba(0, 26, 255, 0.699);
+    background-color: rgba(0, 0, 0, 0.753);
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: rgba(0, 26, 255, 0.699);
+    background-color: rgba(0, 0, 0, 0.753);
 }
 
 #radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: rgba(0, 26, 255, 0.699);
+    background-color: rgba(0, 0, 0, 0.753);
 }
 
 #radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: rgba(0, 26, 255, 0.699);
+    background-color: rgba(0, 0, 0, 0.753);
 }
 
 /* Slider end */
