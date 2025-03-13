@@ -3,6 +3,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 }
 
 body{
@@ -140,7 +141,7 @@ nav ul{
     margin: 0 auto;
     width: 2000px;
     height: 360px;
-    overflow: hidden;
+    
 } 
 
 /* .manual-navigation{
