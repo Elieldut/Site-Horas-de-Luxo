@@ -7,6 +7,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
  
 /*Header*/
@@ -138,9 +139,8 @@ nav ul{
     .slider{
     margin: 0 auto;
     width: 2000px;
-    height: 350px;
+    height: 360px;
     overflow: hidden;
-    
 } 
 
 /* .manual-navigation{
@@ -189,7 +189,7 @@ nav ul{
     .slider{
     margin: 0 auto;
     width: 100%;
-    height: 200px;
+    height: 210px;
     overflow: hidden;
     
 } 
@@ -225,15 +225,15 @@ Esse navigation-auto e para a config da cor dentro do circulo
 }
 
 #radio2:checked ~ .first{
-    margin-left: -111%;
+    margin-left: -110%;
 }
 
 #radio3:checked ~ .first{
-    margin-left: -220%;
+    margin-left: -230%;
 }
 
 #radio4:checked ~ .first{
-    margin-left: -325%;
+    margin-left: -330%;
 }
 
 }
@@ -365,7 +365,7 @@ header{
     background-color: #69696931;
 }
 
-.header-button-side{
+/* .header-button-side{
     display: flex;
     align-items: center;
     justify-self: center;
@@ -415,7 +415,7 @@ header{
 
 .eader-button-side-right img{
   width: 115%;
-}
+} */
 
 spa{
     margin-bottom: 50px;
