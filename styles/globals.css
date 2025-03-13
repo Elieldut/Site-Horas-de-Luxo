@@ -233,7 +233,7 @@ Esse navigation-auto e para a config da cor dentro do circulo
 }
 
 #radio4:checked ~ .first{
-    margin-left: -330%;
+    margin-left: -320%;
 }
 
 }
