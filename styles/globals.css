@@ -364,7 +364,7 @@ header{
     background-color: #69696931;
 }
 
-/* .header-button-side{
+.header-button-side{
     display: flex;
     align-items: center;
     justify-self: center;
@@ -414,7 +414,7 @@ header{
 
 .eader-button-side-right img{
   width: 115%;
-} */
+}
 
 spa{
     margin-bottom: 50px;
