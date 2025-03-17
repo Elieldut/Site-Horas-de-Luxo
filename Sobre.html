@@ -5,7 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="HRL.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/globals.css">
-    <title>Sobre</title>
+    <title>SOBRE</title>
+    <style>
+        
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+header {
+    background-color: #252525;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+#banner {
+    background-image: linear-gradient(to right, #282c34, #4a6572);
+    color: #fff;
+    text-align: center;
+    padding: 10rem 0;
+}
+
+#banner h2{
+
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    margin-top: -2rem;
+}
+
+.btn {
+    background-color: #00000050;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color:rgba(0, 0, 0, 0.712) ;
+    transition: 1.5s;
+}
+
+
+
+
+.company{
+    margin-top: 1.5%;
+}
+
+
+.tit{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.servico {
+    text-align: center;
+}
+
+.servico img {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contato input,
+#contato textarea {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tec{
+    font-size: larger;
+    padding-bottom: 5%;
+}
+
+@media(max-width:800px){
+    .tec{
+    padding-bottom: 19%;
+    font-size: medium;
+}
+
+.company{
+    margin-top: 10%;
+}
+
+#banner h2{
+
+font-size: 27px;
+margin-bottom: 3rem;
+margin-top: -3rem;
+}
+
+}
+
+button{
+    font-size:large;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.company{
+    font-size: larger;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -14,16 +155,13 @@
         <nav>
             <ul>
                 <a href="index.html">
-                    <li>Home</li>
+                    <li>HOME</li>
                 </a>
                 <a href="Produtos.html">
-                    <li>Produtos</li>
+                    <li>PRODUTOS</li>
                 </a>
                 <a href="Contato.html">
-                    <li>Contato</li>
-                </a>
-                <a href="Conta.html">
-                    <li>Conta</li>
+                    <li>CONTATO</li>
                 </a>
             </ul>
         </nav>
@@ -33,6 +171,64 @@
         </div>
       </div>
     </div>
+    <section id="banner">
+        <div class="container">
+            <h2 class="tit">Smartwatch: tecnologia no pulso, <br> estilo no olhar</h2>
+            <p class="tec">Tecnologia e estilo, juntos no seu pulso.</p>
+            <a href="#Fale Conosco" class="btn">Fale Conosco</a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Empresa Horas de Luxo</h2>
+            <p class="company">Somos uma empresa de tecnologia apaixonada por inovação. Nossa missão é transformar ideias em realidade, oferecendo soluções tecnológicas que impulsionam o sucesso de nossos clientes.
+            Com uma equipe de especialistas altamente qualificados, estamos sempre em busca de novas tecnologias e tendências para oferecer o que há de melhor no mercado.</p>
+            <p class="company">Nossa paixão pela inovação nos impulsiona a buscar os mais recentes avanços em tecnologia wearable, enquanto nosso compromisso com a excelência nos leva a selecionar apenas os materiais mais nobres e os designs mais requintados.</p>
+            <p class="company">Cada smartwatch da Horas de Luxo é cuidadosamente projetado para refletir o estilo e a personalidade de nossos clientes. Das linhas clássicas e atemporais aos designs modernos e arrojados, nossa coleção oferece opções para todos os gostos e ocasiões.</p>
+            <p class="company">Na Horas de Luxo, entendemos que um smartwatch é mais do que um acessório. É uma extensão do seu estilo de vida, um companheiro que o acompanha em todos os momentos. Por isso, nos dedicamos a oferecer uma experiência de compra excepcional, com atendimento personalizado e garantia de qualidade.</p>
+            <br>
+            <br>
+            <h2>Nossa Missão:</h2>
+            <ul class="company">
+                <li>Proporcionar aos nossos clientes a mais alta qualidade em smartwatches de luxo, combinando tecnologia de ponta com design exclusivo.</li>
+                <br>
+                <li>Oferecer uma experiência de compra inigualável, com atendimento personalizado e garantia de satisfação.</li>
+                <br>
+                <li>Ser referência no mercado de smartwatches de luxo, impulsionando a inovação e a excelência.</li>
+            </ul>
+            
+        </div>
+    </section>
+<section id="Fale Conosco">
+    <section id="contato">
+        <div class="container">
+            <h2>Mande sua duvida</h2>
+            <br>
+            <form id="form-contato">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+</section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Horas de Luxo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const formContato = document.getElementById('form-contato');
+
+formContato.addEventListener('submit', (event) => {
+    event.preventDefault();
+    alert('Mensagem enviada com sucesso!');
+    formContato.reset();
+});
+    </script>
 
     <script>
         const navbar = document.querySelector(".navbar");
