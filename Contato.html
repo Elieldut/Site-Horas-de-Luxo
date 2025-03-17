@@ -6,6 +6,107 @@
     <link rel="shortcut icon" href="HRL.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/globals.css">
     <title>Contato</title>
+    <style>
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (min-width:800px){
+    .container {
+    width: 80%;
+    margin-top: 8rem;
+    margin-bottom:1rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    
+}
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+#contato {
+    padding: 4rem 0;
+}
+
+.contato-info {
+    display: flex;
+    justify-content: left; /* Centraliza os ícones */
+    gap: 2rem; /* Adiciona espaçamento entre os ícones */
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    text-align: left;
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Herda a cor do texto */
+}
+
+.info-item img {
+    
+    width: 60px;
+    margin-bottom: 0.5rem;
+}
+
+img:hover{
+    transform:scaley(90%);
+    cursor: pointer;
+    transition: 1s;
+}
+
+h4{
+    text-align: left;
+    text-decoration: underline;
+}
+
+button{
+    font-size:large;
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contato input,
+#contato textarea {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+@media (min-width:800px){
+    footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+}
+
+    </style>
 </head>
 <body>
 
@@ -31,6 +132,54 @@
         </div>
       </div>
     </div>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Conecte-se Conosco</h2>
+            <br>
+            <p>Escolha a forma de contato que preferir:</p>
+<br>
+<h4>Click nos ícones</h4>
+<br>
+            <div class="contato-info">
+                <a href="https://wa.me/SEU_NUMERO_WHATSAPP" target="_blank" class="info-item">
+                    <img src="whatsapp.png " width="100px" alt="WhatsApp">
+                    <p>WhatsApp</p>
+                </a>
+                <a href="https://www.instagram.com/SEU_INSTAGRAM" target="_blank" class="info-item">
+                    <img src="instagram.png" width="100px" alt="Instagram">
+                    <p>Instagram</p>
+                </a>
+                
+            </div>
+
+            <p>Ou preencha o formulário abaixo:contato@horasdeluxo.com</p>
+<br>
+            <form id="form-contato">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Horas de Luxo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+    const formContato = document.getElementById('form-contato');
+
+        formContato.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Mensagem enviada com sucesso!');
+            formContato.reset();
+        });
+        
+    </script>
 
     <script>
         const navbar = document.querySelector(".navbar");
