@@ -377,8 +377,10 @@ header{
 }
 
 .header-button-side-left h2{
-    font-size: 3.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    margin-bottom: 1.6rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
     max-width: 1080px;
     min-width: -900px;
    
@@ -853,3 +855,30 @@ padding: 10px;
 /*Config do menu seta*/
 
 
+.typing-container {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 10%;
+}
+
+
+.typing-text {
+    font-size: 3rem;
+    margin-bottom: 1.6rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    max-width: 1080px;
+    min-width: -900px;
+    
+}
+.cursor {
+    border-left: 0.1em solid rgb(0, 0, 0);
+    animation: blink-caret 0.75s step-end infinite;
+    font-size: 3rem;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(0, 0, 0); }
+}

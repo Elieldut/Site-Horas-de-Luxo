@@ -117,7 +117,30 @@
         <div class="header-inner-content">
             <div class="header-button-side">
                 <div class="header-button-side-left">
-                    <h2>Um Novo Estilo<br>para Seu Visual</h2>
+                    <div class="typing-container">
+                        <span class="typing-text"></span><span class="cursor"></span>
+                    </div>
+                    <script>
+                        const textElement = document.querySelector('.typing-text');
+                const cursorElement = document.querySelector('.cursor');
+                const text = "Um Novo Estilo para Seu Visual";
+                let index = 0;
+                let speed = 110;
+                
+                function typeWriter() {
+                    if (index < text.length) {
+                        textElement.textContent += text.charAt(index);
+                        index++;
+                        setTimeout(typeWriter, speed);
+                    } else {
+                        cursorElement.style.display = 'none'; // Esconde o cursor no final
+                    }
+                }
+                
+                typeWriter();
+                    </script>
+            </section>
+                    
                     <p>
                         O smartwatch é muito mais do que um simples acessório tecnológico, ele é uma poderosa ferramenta para aprimorar o seu estilo de
                         vida e a sua aparência.

@@ -70,7 +70,7 @@ header nav a {
 
 
 .tit{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 section {
@@ -113,7 +113,7 @@ section {
 @media(max-width:800px){
     .tec{
     padding-bottom: 19%;
-    font-size: medium;
+    font-size: 14.7px;
 }
 
 .formfd{
@@ -158,7 +158,29 @@ footer {
     min-width: 100%;
 }
 
+.typing-container {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 10%;
+}
 
+
+.typing-text {
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Arial, sans-serif;
+    
+}
+.cursor {
+    border-left: 0.1em solid rgb(255, 255, 255);
+    animation: blink-caret 0.75s step-end infinite;
+    font-size: 2rem;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(255, 255, 255); }
+}
 
 
     </style>
@@ -188,8 +210,29 @@ footer {
     </div>
     <section id="banner">
         <div class="container">
-            <h2 class="tit">Smartwatch: tecnologia no pulso, <br> estilo no olhar</h2>
-            <p class="tec">Tecnologia e estilo, juntos no seu pulso.</p>
+            <div class="typing-container">
+                <span class="typing-text"></span><span class="cursor"></span>
+            </div>
+            <script>
+                const textElement = document.querySelector('.typing-text');
+        const cursorElement = document.querySelector('.cursor');
+        const text = "Smartwatch: tecnologia no pulso, estilo no olhar.";
+        let index = 0;
+        let speed = 110;
+        
+        function typeWriter() {
+            if (index < text.length) {
+                textElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            } else {
+                cursorElement.style.display = 'none'; // Esconde o cursor no final
+            }
+        }
+        
+        typeWriter();
+            </script>
+            <p class="tec">Tecnologia e estilo, você só encontra a aqui.</p>
             <a href="#Fale Conosco" class="btn">Fale Conosco</a>
         </div>
     </section>
