@@ -866,7 +866,7 @@ padding: 10px;
 .typing-text {
     font-size: 3rem;
     margin-bottom: 1.6rem;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:'Times New Roman', Times, serif, serif;
     font-weight: bold;
     max-width: 1080px;
     min-width: -900px;
