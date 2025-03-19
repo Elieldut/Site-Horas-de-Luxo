@@ -16,7 +16,8 @@
                font-family: Arial, sans-serif;
            }
            body {
-               background-color: #ffffff;
+               background-color: #000000;
+               
            }
            .navbar {
                background: #222222;
@@ -26,8 +27,7 @@
                font-size: 20px;
            }
            .container {
-               margin: auto;
-               padding: 10px;
+            
                background: rgb(255, 255, 255);
                border-top-right-radius: 10px;
                border-top-left-radius: 10px;
@@ -45,6 +45,26 @@
                    
                }
 
+               .variations{
+                   margin-top: -7%;
+                   margin-left: -0.3%;
+               }
+
+               footer {
+            
+                    height: 135px;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 1rem;
+                padding-left: 17%;
+                margin-top: auto; /* Empurra o footer para a parte inferior */
+            }
+                footer img{
+                    margin-left: 23%;
+                    width: 23px;
+                }
+
                .ul,li{
                 margin-left: 560px;
                    margin-right: 560px;
@@ -55,10 +75,6 @@
                    padding: 10px;
                    padding-left: 29.5%;
                    padding-right: 29.5%;
-               }
-
-               .variations{
-                   margin-top: -8%;
                }
 
                .product-price{
@@ -77,6 +93,7 @@
 
            
            }
+           
            .product-section {
                display: flex;
                flex-wrap: wrap;
@@ -96,12 +113,7 @@
                display: block;
            }
 
-           .gray-background{
-           color: white;
-           box-shadow: none;
-           background-color: #444444; 
-           margin:-12px;
-           }
+        
 
            h2,h3,p{
                margin-left: 10px;
@@ -176,11 +188,33 @@
                text-align: center;
                width: 150px;
            }
+
            @media (max-width: 768px) {
                .product-section {
                    flex-direction: column;
                    align-items: center;
                }
+
+               .variations{
+                   margin-top: -8%;
+                   margin-left: -1%;
+               }
+
+               footer {
+                    max-width: 200%;
+                    min-width: 150%;
+                    height: 113px;
+                    background-color: #333;
+                    color: #fff;
+                    text-align: center;
+                    padding: 1rem;
+                    padding-right: 50.8%;
+                    margin-top: auto; /* Empurra o footer para a parte inferior */
+                }
+            footer img{
+                margin-left: 45%;
+                width: 23px;
+            }
 
                li{
                 margin-left: 10%;
@@ -227,9 +261,6 @@
            background-color: #444444;
           }
           
-          #textfooter{
-           color: white;
-          }
 
           a{
            text-decoration: none;
@@ -239,6 +270,12 @@
            transition:1ms;
            
           }
+
+        .variat{
+        margin-top: -4%;
+            text-align: left;
+        }
+
         </style>
     </head>
     <body>
@@ -270,7 +307,9 @@
                         </h1>
                         <p class="product-price">R$ 183,90</p>
                         <div class="variations">
-                            <label>Cor do Smartwatch:</label>
+                            <br>
+                            <h4 class="variat">Cor do Smartwatch:</h4>
+                            <br>
                             <select>
                                 <option>Cinza</option>
                                 <!-- <option>Prata</option>
@@ -355,26 +394,7 @@
                 }
             </script> 
             <br>
-            <footer class="gray-background">
-                <div class="page-inner-content footer-content">
-            <div class="logo-footer">
-                <h1 class="logo"><span>Horas </span><spa>de Luxo</spa></h1><br>
-                <p id="textfooter">O objetivo da nossa loja é proporcionar aos nossos clientes uma experiência única ao adquirir nossos produtos tecnológicos, oferecendo uma ampla variedade de modelos de alta qualidade que atendem a diferentes estilos e necessidades.</p>
-            </div>
-            <div class="links">
-                <h3>Contatos:</h3>
-                <p id="textfooter">Clique nos ícones abaixo</p>
-                <br>
-                <ul>
-                    <p>
-                    <a href="https://www.instagram.com/horas_de_luxo/" target="_blank"><img src="../instagram.png" width="40px"></a>
-                            <a href="https://api.whatsapp.com/send/?phone=31996438126&text&type=phone_number&app_absent=0" target="_blank"><img src="../whatsapp.png" width="40px"></a>
-                    </p>
             
-                </ul>
-            </div>
-                </div>
-            </footer>
                 <script>
             const navbar = document.querySelector(".navbar");
             const menuButton = document.querySelector(".menu-button");
@@ -382,8 +402,14 @@
                 navbar.classList.toggle("show-menu");
             });
                 </script>
-            
+             <footer>
+                <div>
+                    <p>&copy; 2025 Horas de Luxo. Web Site verificado.</p><p> <img src="../simbolo-do-google.png" width="70px"></p>
+                    
+                        
+                </div>
+            </footer>
         </main>
-
+           
 </body>
 </html>
