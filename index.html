@@ -381,7 +381,14 @@
     <script>
         // let navbar = document.querySelector(".navbar");
         // let menuButton = document.querySelector(".menu-button");
-
+        
+        if (performance.navigation.type === 1 && localStorage.getItem('reloaded') !== 'true') {
+  localStorage.setItem('reloaded', 'true');
+  location.reload(true);
+} else {
+  localStorage.removeItem('reloaded'); // Limpa o sinalizador após o recarregamento
+}
     </script>
+    
 </body>
 </html>
