@@ -16,7 +16,8 @@
                font-family: Arial, sans-serif;
            }
            body {
-               background-color: #ffffff;
+               background-color: #000000;
+               
            }
            .navbar {
                background: #222222;
@@ -26,8 +27,7 @@
                font-size: 20px;
            }
            .container {
-               margin: auto;
-               padding: 10px;
+            
                background: rgb(255, 255, 255);
                border-top-right-radius: 10px;
                border-top-left-radius: 10px;
@@ -45,6 +45,34 @@
                    
                }
 
+               .variations{
+                   margin-top: -7%;
+                   margin-left: -0.3%;
+               }
+
+               footer {
+            
+                height: 143px;
+                background-color: #333;
+                color: #fff;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;      
+            }
+
+            h6{
+                text-align: center;
+                padding-top: 43px;
+                font-size: 1rem;
+                font-weight: bolder;
+            }
+                footer img{
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 23px;
+                }
+
                .ul,li{
                 margin-left: 560px;
                    margin-right: 560px;
@@ -55,10 +83,6 @@
                    padding: 10px;
                    padding-left: 29.5%;
                    padding-right: 29.5%;
-               }
-
-               .variations{
-                   margin-top: -8%;
                }
 
                .product-price{
@@ -77,6 +101,7 @@
 
            
            }
+           
            .product-section {
                display: flex;
                flex-wrap: wrap;
@@ -96,12 +121,7 @@
                display: block;
            }
 
-           .gray-background{
-           color: white;
-           box-shadow: none;
-           background-color: #444444; 
-           margin:-12px;
-           }
+        
 
            h2,h3,p{
                margin-left: 10px;
@@ -176,11 +196,33 @@
                text-align: center;
                width: 150px;
            }
+
            @media (max-width: 768px) {
                .product-section {
                    flex-direction: column;
                    align-items: center;
                }
+
+               .variations{
+                   margin-top: -8%;
+                   margin-left: -1%;
+               }
+
+               footer {
+                    
+                    height: 113px;
+                    background-color: #333;
+                    color: #fff;
+                    text-align: center;
+                    margin-top: auto; /* Empurra o footer para a parte inferior */
+                }
+            footer img{
+                align-items: center;
+                display: block;
+                text-align: center;
+                width: 23px;
+                
+            }
 
                li{
                 margin-left: 10%;
@@ -227,9 +269,29 @@
            background-color: #444444;
           }
           
-          #textfooter{
-           color: white;
+
+          a{
+           text-decoration: none;
+           cursor: pointer ;
+           color: #ffffff;
+           transform: translateY(-10px);
+           transition:1ms;
+           
           }
+
+        .variat{
+            margin-top: -4%;
+            text-align: left;
+    
+        }
+
+   
+
+          main{
+           background-color: #444444;
+          }
+          
+          
 
           a{
            text-decoration: none;
@@ -368,24 +430,11 @@
                 }
             </script> 
             <br>
-            <footer class="gray-background">
-                <div class="page-inner-content footer-content">
-            <div class="logo-footer">
-                <h1 class="logo"><span>Horas </span><spa>de Luxo</spa></h1><br>
-                <p id="textfooter">O objetivo da nossa loja é proporcionar aos nossos clientes uma experiência única ao adquirir nossos produtos tecnológicos, oferecendo uma ampla variedade de modelos de alta qualidade que atendem a diferentes estilos e necessidades.</p>
-            </div>
-            <div class="links">
-                <h3>Contatos:</h3>
-                <p id="textfooter">Clique nos ícones abaixo</p>
-                <br>
-                <ul>
-                    <p>
-                    <a href="https://www.instagram.com/horas_de_luxo/" target="_blank"><img src="../instagram.png" width="40px"></a>
-                            <a href="https://api.whatsapp.com/send/?phone=31996438126&text&type=phone_number&app_absent=0" target="_blank"><img src="../whatsapp.png" width="40px"></a>
-                    </p>
-            
-                </ul>
-            </div>
+            <footer>
+                <div>
+                    <h6>&copy; 2025 SITE VERIFICADO.</h6><p> <img src="../simbolo-do-google.png" width="70px"></p>
+                    
+                        
                 </div>
             </footer>
                 <script>
