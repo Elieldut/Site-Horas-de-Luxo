@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../HRL.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/globals.css">
+    <title>Horas de Luxo</title>
+</head>
+<body class="bw99">
+    
+        <style>
+                      * {
+               
+               box-sizing: border-box;
+               font-family: Arial, sans-serif;
+           }
+           body {
+               background-color: #000000;
+               
+           }
+           .navbar {
+               background: #222222;
+               padding: 15px;
+               color: white;
+               text-align: center;
+               font-size: 20px;
+           }
+           .container {
+            
+               background: rgb(255, 255, 255);
+               border-top-right-radius: 10px;
+               border-top-left-radius: 10px;
+               border-bottom-left-radius:10px;
+               border-bottom-right-radius: 10px;
+               overflow: hidden ;
+               box-shadow:-0.11px 1px 1px 1px #ffffff;
+              
+           }
+
+           @media (min-width:200px) {
+               .container{
+                   margin-left: 20px;
+                   margin-right: 20px;
+                   
+               }
+
+               .variations{
+                   margin-top: -7%;
+                   margin-left: -0.3%;
+               }
+
+               footer {
+            
+                height: 143px;
+                background-color: #333;
+                color: #fff;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;      
+            }
+
+            h6{
+                text-align: center;
+                padding-top: 43px;
+                font-size: 1rem;
+                font-weight: bolder;
+            }
+                footer img{
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 23px;
+                }
+
+               .ul,li{
+                margin-left: 560px;
+                   margin-right: 560px;
+               }
+
+               .description, h3, p{
+                   text-align:left;
+                   padding: 10px;
+                   padding-left: 29.5%;
+                   padding-right: 29.5%;
+               }
+
+               .product-price{
+                   margin-left: -29.4%;
+                   padding-bottom: -120px;
+               }
+
+               .product-section, main {
+                   flex-direction: column;
+                   align-items: center;
+               }
+               .product-details, .image-slider {
+                   width: 40%;
+               }
+
+
+           
+           }
+           
+           .product-section {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 20px;
+               padding: 10px;
+           }
+           .image-slider {
+               position: relative;
+               flex: 1 1 45%;
+           }
+           .product-img {
+               width: 100%;
+               border-radius: 10px;
+               display: none;
+           }
+           .product-img.active {
+               display: block;
+           }
+
+        
+
+           h2,h3,p{
+               margin-left: 10px;
+               margin-top: 15px;
+               margin-bottom: 15px;
+           }
+
+           .prev, .next {
+               position: absolute;
+               top: 50%;
+               transform: translateY(-50%);
+               background: rgb(0, 0, 0);
+               color: rgb(255, 255, 255);
+               padding: 10px;
+               cursor: pointer;
+               border-radius: 9999px;
+               
+               
+           }
+           .prev { left: 10px; }
+           .next { right: 10px; }
+           
+           .product-details {
+               flex: 1 1 45%;     
+           }
+           .product-title {
+               font-size: 24px;
+               margin-bottom: 10px;
+           }
+           .product-price {
+               color: #27ae60;
+               font-size: 25px;
+               margin-bottom: 10px;
+               padding-bottom: 10%;
+           }
+           .variations {
+               margin-bottom: 20px;
+               padding: 1px;
+           }
+           .buy-button {
+               display: inline-block;
+               background: #27ae60;
+               color: white;
+               padding: 10px 20px;
+               text-decoration: none;
+               border-radius: 5px;
+               font-size: 18px;
+           }
+           .buy-button:hover {
+               background: #219150;
+           }
+
+           h2{
+               margin-top: 1px;
+               display: block;
+               text-align: left;
+           }
+
+           .h3{
+            margin-bottom: -2%;
+           }
+
+           .related-list {
+               display: flex;
+               gap: 10px;
+               overflow-x: auto;
+           }
+           .related-item {
+               background: white;
+               padding: 10px;
+               border-radius: 10px;
+               text-align: center;
+               width: 150px;
+           }
+
+           @media (max-width: 768px) {
+               .product-section {
+                   flex-direction: column;
+                   align-items: center;
+               }
+
+               .variations{
+                   margin-top: -8%;
+                   margin-left: -1%;
+               }
+
+               footer {
+                    
+                    height: 113px;
+                    background-color: #333;
+                    color: #fff;
+                    text-align: center;
+                    margin-top: auto; /* Empurra o footer para a parte inferior */
+                }
+            footer img{
+                align-items: center;
+                display: block;
+                text-align: center;
+                width: 23px;
+                
+            }
+
+               li{
+                margin-left: 10%;
+                margin-right: 10%;
+               }
+
+               .product-price{
+                   margin-left: -2.4%;
+               }
+
+               .description, h3, p{
+                   margin: auto;
+                   padding-left: 3%;
+                   padding-right: 3%;
+               }
+
+               .variations{
+                   margin-top: 3%;
+                   padding: 5px;
+               }
+
+               .product-details, .image-slider {
+                   width: 100%;
+               }
+           }
+
+        
+           .back{
+               font-size: 2rem;
+           }
+
+           
+
+           a:hover{
+               color: #dfdfdf;
+               flex-direction: column-reverse;
+              
+           
+           }
+
+   
+
+          main{
+           background-color: #444444;
+          }
+          
+
+          a{
+           text-decoration: none;
+           cursor: pointer ;
+           color: #ffffff;
+           transform: translateY(-10px);
+           transition:1ms;
+           
+          }
+
+        .variat{
+            margin-top: -4%;
+            text-align: left;
+    
+        }
+
+   
+
+          main{
+           background-color: #444444;
+          }
+          
+          
+
+          a{
+           text-decoration: none;
+           cursor: pointer ;
+           color: #ffffff;
+           transform: translateY(-10px);
+           transition:1ms;
+           
+          }
+        </style>
+    </head>
+    <body>
+        <div class="navbar"><h1 class="logo"><span>Horas </span><spa>de Luxo</spa><div class="back"><a class="back" href="../index.html">⇦</a></div></h1>
+        </div>
+        
+        
+        <main>
+            <div class="container">
+                <div class="product-section">
+                    <div class="image-slider">
+                        <img src="../MibroT1.1.jpg" alt="Produto 1" class="product-img active">
+
+                        <img src="../MibroT1.1.jpg" alt="Produto 2" class="product-img">
+
+                        <img src="../MibroT1.1.jpg" alt="Produto 3" class="product-img">
+
+                        <img src="../MibroT1.1.jpg" alt="Produto 4" class="product-img">
+
+                        <img src="../MibroT1.1.jpg" alt="Produto 5" class="product-img">
+
+                        <img src="../MibroT1.1.jpg" alt="Produto 6" class="product-img">
+
+                        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                        <button class="next" onclick="changeImage(1)">&#10095;</button>
+                    </div>
+                    <div class="product-details">
+                        <h1 class="product-title">MODELO:Mibro T1|Amoled|2ATM 
+                        </h1>
+                        <p class="product-price">R$ 366,00 </p>
+                        <div class="variations">
+                            <br>
+                            <h4 class="variat">Cor do Smartwatch:</h4>
+                                <br>
+                            <select>
+                                <option>TARNISH</option>
+                            </select>
+                        </div>
+                        <a href="../Cheackout/tescheck.html" class="buy-button">Comprar Agora</a>
+                    </div>
+                </div>
+                
+                    <div>
+                        <div>
+                            <h2 class="description"><ins>Descrição do Produto</ins></h2>
+                            <p >⚠️Esse produto não possui garantia com a horas_de_luxo. Para reclamações, procure o fabricante.
+<br>
+<br>
+Mibro T1
+                                
+                                 
+                                <br>
+<br>
+Smartwatch Mibro T1, um dispositivo inteligente que combina tecnologia e estilo. Com tela AMOLED de 1.6 polegadas, chamadas Bluetooth e resistência à água de 2ATM, este smartwatch é perfeito para o dia a dia e atividades esportivas.
+                            </p>
+                                <h3 class="h3">Informações Principais:</h3>
+                                
+                                <p>
+                                    
+                                    <p>➣Tela AMOLED de 1.6 polegadas;</p>
+                                    
+                                    <p>➣Resolução de 320x360 pixels;</p>
+                                    
+                                    <p>
+                                        ➣Conectividade Bluetooth 5.0;
+                                    </p>
+
+                                    <p>➣Bateria de 350mAh;</p>
+                                    
+                                    <p>➣Carregamento magnético; </p>
+                                    
+                                    <p>
+                                        ➣Vida útil da bateria de até 7 dias em uso diário;
+                                        
+                                    </p>
+                                    <p>➣Resistência à água de 2ATM;</p>
+
+                                    <p>➣Compatibilidade com Android 5.0 e iOS 10.0 ou superior;</p>
+
+                                    <p>➣20 modos esportivos;</p>
+
+                                    <p>➣Monitoramento de frequência cardíaca e SpO2;</p>
+
+                                    <p>➣Monitoramento do sono;</p>
+
+                                    <p>➣Material da caixa em liga metálica;</p>
+
+                                    <p>➣Pulseira de silicone;</p>
+
+                                    <p>➣Peso de 53.5g (com pulseira);</p>
+
+
+                        </div>
+            <script>
+                let currentImageIndex = 0;
+                const images = document.querySelectorAll('.product-img');
+                function changeImage(step) {
+                    images[currentImageIndex].classList.remove('active');
+                    currentImageIndex = (currentImageIndex + step + images.length) % images.length;
+                    images[currentImageIndex].classList.add('active');
+                }
+            </script> 
+            <br>
+            <footer>
+                <div>
+                    <h6>&copy; 2025 SITE VERIFICADO.</h6><p> <img src="../simbolo-do-google.png" width="70px"></p>
+                    
+                        
+                </div>
+            </footer>
+                <script>
+            const navbar = document.querySelector(".navbar");
+            const menuButton = document.querySelector(".menu-button");
+            menuButton.addEventListener('click', () => {
+                navbar.classList.toggle("show-menu");
+            });
+                </script>
+            
+        </main>
+
+</body>
+</html>
