@@ -451,7 +451,19 @@ spa{
     .logo{
         font-size: 1.2rem;
     }
-
+    
+    .quantidade-sacola {
+        position: absolute;
+        display: block;
+        top: 40px;
+        right: 310px;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0.822);
+        color: white;
+        border-radius: 100%;
+        padding: 3px;
+        font-size: 15px;
+      }
 
     .menu-button{
         display: block;
@@ -604,7 +616,15 @@ a{
     .section-title{
         font-size: 1.5rem;
     }
-
+    .quantidade-sacola {
+        top: 40px;
+        right: 310px;
+        background-color: rgba(0, 0, 0, 0.822);
+        color: white;
+        border-radius: 100%;
+        padding: 3px;
+        font-size: 15px;
+      }
     .cols-3{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -689,7 +709,16 @@ a{
     .avaliações{
         flex-direction: column;
     }
-
+    .quantidade-sacola {
+        position: absolute;
+        top: 40px;
+        right: 50px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        border-radius: 100%;
+        padding: 3px;
+        font-size: 15px;
+      }
     .avaliação{
         margin-bottom: 1.2rem;
     }
@@ -849,6 +878,19 @@ transform: translateX(-50%);
 padding: 10px;               
 }
 
+.quantidade-sacola {
+    position: absolute;
+    display: block;
+    top: 40px;
+    right: 310px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.822);
+    color: white;
+    border-radius: 100%;
+    padding: 3px;
+    font-size: 15px;
+  }
+
 .dropdown-toggle-container {
     display: inline-flex;
     align-items: center;
@@ -867,6 +909,17 @@ left: 29.9%;
 transform: translateX(-46%);                          
 padding: 10px;            
 }
+
+.quantidade-sacola {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    background-color: rgba(0, 0, 0, 0.822);
+    color: white;
+    border-radius: 100%;
+    padding: 3px;
+    font-size: 15px;
+  }
 
 .dropdown-toggle-container {
     display: inline-flex;
