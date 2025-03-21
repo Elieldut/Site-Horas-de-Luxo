@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../HRL.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/globals.css">
+    <title>Horas de Luxo</title>
+</head>
+<body class="bw99">
+    
+        <style>
+                      * {
+               
+               box-sizing: border-box;
+               font-family: Arial, sans-serif;
+           }
+           body {
+               background-color: #000000;
+               
+           }
+           .navbar {
+               background: #222222;
+               padding: 15px;
+               color: white;
+               text-align: center;
+               font-size: 20px;
+           }
+           .container {
+            
+               background: rgb(255, 255, 255);
+               border-top-right-radius: 10px;
+               border-top-left-radius: 10px;
+               border-bottom-left-radius:10px;
+               border-bottom-right-radius: 10px;
+               overflow: hidden ;
+               box-shadow:-0.11px 1px 1px 1px #ffffff;
+              
+           }
+
+           @media (min-width:200px) {
+               .container{
+                   margin-left: 20px;
+                   margin-right: 20px;
+                   
+               }
+
+               .variations{
+                   margin-top: -7%;
+                   margin-left: -0.3%;
+               }
+
+               footer {
+            
+                height: 143px;
+                background-color: #333;
+                color: #fff;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;      
+            }
+
+            h6{
+                text-align: center;
+                padding-top: 43px;
+                font-size: 1rem;
+                font-weight: bolder;
+            }
+                footer img{
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 23px;
+                }
+
+               .ul,li{
+                margin-left: 560px;
+                   margin-right: 560px;
+               }
+
+               .description, h3, p{
+                   text-align:left;
+                   padding: 10px;
+                   padding-left: 29.5%;
+                   padding-right: 29.5%;
+               }
+
+               .product-price{
+                   margin-left: -29.4%;
+                   padding-bottom: -120px;
+               }
+
+               .product-section, main {
+                   flex-direction: column;
+                   align-items: center;
+               }
+               .product-details, .image-slider {
+                   width: 40%;
+               }
+
+
+           
+           }
+           
+           .product-section {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 20px;
+               padding: 10px;
+           }
+           .image-slider {
+               position: relative;
+               flex: 1 1 45%;
+           }
+           .product-img {
+               width: 100%;
+               border-radius: 10px;
+               display: none;
+           }
+           .product-img.active {
+               display: block;
+           }
+
+        
+
+           h2,h3,p{
+               margin-left: 10px;
+               margin-top: 15px;
+               margin-bottom: 15px;
+           }
+
+           .prev, .next {
+               position: absolute;
+               top: 50%;
+               transform: translateY(-50%);
+               background: rgb(0, 0, 0);
+               color: rgb(255, 255, 255);
+               padding: 10px;
+               cursor: pointer;
+               border-radius: 9999px;
+               
+               
+           }
+           .prev { left: 10px; }
+           .next { right: 10px; }
+           
+           .product-details {
+               flex: 1 1 45%;     
+           }
+           .product-title {
+               font-size: 24px;
+               margin-bottom: 10px;
+           }
+           .product-price {
+               color: #27ae60;
+               font-size: 25px;
+               margin-bottom: 10px;
+               padding-bottom: 10%;
+           }
+           .variations {
+               margin-bottom: 20px;
+               padding: 1px;
+           }
+           .buy-button {
+               display: inline-block;
+               background: #27ae60;
+               color: white;
+               padding: 10px 20px;
+               text-decoration: none;
+               border-radius: 5px;
+               font-size: 18px;
+           }
+           .buy-button:hover {
+               background: #219150;
+           }
+
+           h2{
+               margin-top: 1px;
+               display: block;
+               text-align: left;
+           }
+
+           .h3{
+            margin-bottom: -2%;
+           }
+
+           .related-list {
+               display: flex;
+               gap: 10px;
+               overflow-x: auto;
+           }
+           .related-item {
+               background: white;
+               padding: 10px;
+               border-radius: 10px;
+               text-align: center;
+               width: 150px;
+           }
+
+           @media (max-width: 768px) {
+               .product-section {
+                   flex-direction: column;
+                   align-items: center;
+               }
+
+               .variations{
+                   margin-top: -8%;
+                   margin-left: -1%;
+               }
+
+               footer {
+                    
+                    height: 113px;
+                    background-color: #333;
+                    color: #fff;
+                    text-align: center;
+                    margin-top: auto; /* Empurra o footer para a parte inferior */
+                }
+            footer img{
+                align-items: center;
+                display: block;
+                text-align: center;
+                width: 23px;
+                
+            }
+
+               li{
+                margin-left: 10%;
+                margin-right: 10%;
+               }
+
+               .product-price{
+                   margin-left: -2.4%;
+               }
+
+               .description, h3, p{
+                   margin: auto;
+                   padding-left: 3%;
+                   padding-right: 3%;
+               }
+
+               .variations{
+                   margin-top: 3%;
+                   padding: 5px;
+               }
+
+               .product-details, .image-slider {
+                   width: 100%;
+               }
+           }
+
+        
+           .back{
+               font-size: 2rem;
+           }
+
+           
+
+           a:hover{
+               color: #dfdfdf;
+               flex-direction: column-reverse;
+              
+           
+           }
+
+   
+
+          main{
+           background-color: #444444;
+          }
+          
+
+          a{
+           text-decoration: none;
+           cursor: pointer ;
+           color: #ffffff;
+           transform: translateY(-10px);
+           transition:1ms;
+           
+          }
+
+        .variat{
+            margin-top: -4%;
+            text-align: left;
+    
+        }
+
+   
+
+          main{
+           background-color: #444444;
+          }
+          
+          
+
+          a{
+           text-decoration: none;
+           cursor: pointer ;
+           color: #ffffff;
+           transform: translateY(-10px);
+           transition:1ms;
+           
+          }
+        </style>
+    </head>
+    <body>
+        <div class="navbar"><h1 class="logo"><span>Horas </span><spa>de Luxo</spa><div class="back"><a class="back" href="../index.html">⇦</a></div></h1>
+        </div>
+        
+        
+        <main>
+            <div class="container">
+                <div class="product-section">
+                    <div class="image-slider">
+                        <img src="../EASYSMARTWATCH.1.jpg" alt="Produto 1" class="product-img active">
+
+                        <img src="../EASYSMARTWATCH.2.jpg" alt="Produto 2" class="product-img">
+
+                        <img src="../EASYSMARTWATCH.3.jpg" alt="Produto 3" class="product-img">
+
+                        <img src="../EASYSMARTWATCH.4.jpg" alt="Produto 4" class="product-img">
+
+                        <img src="../EASYSMARTWATCH.5.jpg" alt="Produto 5" class="product-img">
+
+                        <img src="../EASYSMARTWATCH.6.jpg" alt="Produto 6" class="product-img">
+
+                        <img src="../EASYSMARTWATCH.7.jpg" alt="Produto 7" class="product-img">
+
+                        <img src="../EASYSMARTWATCH.8.jpg" alt="Produto 8" class="product-img">
+
+                        <img src="../EASYSMARTWATCH.9.jpg" alt="Produto 9" class="product-img">
+
+                        <img src="../EASYSMARTWATCH.10.jpg" alt="Produto 10" class="product-img">
+
+                        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                        <button class="next" onclick="changeImage(1)">&#10095;</button>
+                    </div>
+                    <div class="product-details">
+                        <h1 class="product-title">MODELO: MODELO:EASY SMARTWATCH A PROVA D'ÁGUA 1 ATM</h1>
+                        <p class="product-price">R$ 278,50 </p>
+                        <div class="variations">
+                            <br>
+                            <h4 class="variat">Cor do Smartwatch:</h4>
+                                <br>
+                            <select>
+                                <option>Prata</option>
+                                <option>Preto</option>
+                                <option>Rosa</option>
+                            </select>
+                        </div>
+                        <a href="../Cheackout/tescheck.html" class="buy-button">Comprar Agora</a>
+                    </div>
+                </div>
+                
+                    <div>
+                        <div>
+                            <h2 class="description"><ins>Descrição do Produto</ins></h2>
+                            <p >
+                                ATENÇÃO ÀS RECOMENDAÇÕES DE USO PARA MANTER A GARANTIA DO SMARTWATCH:
+<br>
+<br>
+1. Este produto tem certificação 1ATM, não sendo recomendado para esportes aquáticos ou uso extremo, recomendamos apenas para banho de chuveiro ou banho de piscina rasa, sem mergulho ou natação.
+<br>
+<br>
+2. Este produto é a prova d'água, mas, como todos os modelos à prova d'água, não pode ser usado em banho quente, sauna ou água do mar.
+<br>
+<br>
+3. Este produto não tem garantia para entrada de vapor. Evite usar em água quente.
+<br>
+<br>
+4. Não pressionar botões embaixo d´água, pode afetar a vedação.
+<br>
+<br>
+5. Ao sair da água, aguarde cerca de 30 minutos para o smartwatch secar por completo, para somente depois utilizar.
+<br>
+<br>
+6. Não carregar o smartwatch após usá-lo na água.
+<br>
+<br>
+O EASY é um smartwatch projetado para facilitar sua vida diária, oferecendo funcionalidades práticas e durabilidade incomparável. EASY foi pensado e projetado para ser seu companheiro diário sendo ele aprova d’água 1ATM, designer inovador e exclusivo, sem contar com a bateria de longa duração feita para durar até 7 dias para acompanhar o seu ritmo.
+                            </p>
+                                <h3 class="h3">Informações Principais:</h3>
+                                
+                                <p>
+                                    
+                                    <p>➣Faz e Recebe Ligações;</p>
+                                    
+                                    <p>➣Recebe notificações;</p>
+                                    
+                                    <p>
+                                        ➣ Modo saúde: oxigenação do sangue, frequência cardíaca, nível de stress;
+                                    </p>
+
+                                    <p>➣Modos esporte para monitoramento de atividade física;</p>
+                                    
+                                    <p>➣Monitoramento de sono; </p>
+                                    
+                                    <p>
+                                        ➣Controle de câmera remoto;
+                                        
+                                    </p>
+                                    <p>➣Controle de música;</p>
+
+                                    <p>➣Aprova d’água 1ATM;</p>
+                                    
+                                        <p>
+                                            ➣Girar o pulso para ligar a tela;
+                                        </p>
+                                    
+                                    
+                                        <p>
+                                            ➣Diversos idiomas, 
+                                            incluindo Português;
+                                        </p>
+                                        
+                                        <p>➣Previsão do tempo;</p>
+
+                                        <p>➣Jogos  ;</p>
+
+                                        <p>➣Comando de Voz;</p>
+
+                                        <h3 class="h3">Outras características do modelo:</h3>
+                                    
+                                        <p>➣Fabricante: WEARZONE;</p>
+
+                                    <p>➣Aplicativo: DAFIT;</p>
+                                    
+                                    <p>➣Tamanho: 45mm ;</p>
+                                    
+                                    <p>➣Pulseira: 22mm pino;</p>
+                                
+                                    <p>➣Certificação: 5ATM;</p>
+
+                                    <p>➣CPU: JIELI7012F6;</p>
+
+                                    <p>➣Tela: 1.83"TFT 240x284;</p>
+
+                                    <p>➣Carregamento: magnético ;</p>
+
+                                    <p>➣Resistência à água: 1 ATM;</p>
+
+                                    <p>➣Bateria : 230 mAh;</p>
+
+                        </div>
+            <script>
+                let currentImageIndex = 0;
+                const images = document.querySelectorAll('.product-img');
+                function changeImage(step) {
+                    images[currentImageIndex].classList.remove('active');
+                    currentImageIndex = (currentImageIndex + step + images.length) % images.length;
+                    images[currentImageIndex].classList.add('active');
+                }
+            </script> 
+            <br>
+            <footer>
+                <div>
+                    <h6>&copy; 2025 SITE VERIFICADO.</h6><p> <img src="../simbolo-do-google.png" width="70px"></p>
+                    
+                        
+                </div>
+            </footer>
+                <script>
+            const navbar = document.querySelector(".navbar");
+            const menuButton = document.querySelector(".menu-button");
+            menuButton.addEventListener('click', () => {
+                navbar.classList.toggle("show-menu");
+            });
+                </script>
+            
+        </main>
+
+</body>
+</html>
