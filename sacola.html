@@ -63,6 +63,10 @@
            a{
             color: white;
            }
+
+           .comprar a{
+            color: #000;
+           }
     </style>
 </head>
 <body>
@@ -90,7 +94,7 @@ function exibirProdutosSacola() {
         <p>Preço: R$ ${produto.preco}</p>
       </div>
       <div>
-        <button class="comprar" data-index="${index}">Comprar</button>
+        <button class="comprar" data-index="${index}"><a href="../Site-Horas-de-Luxo/pagprincipal/w99.html">Comprar</a></button>
         <button class="remover" data-index="${index}">Remover</button>
       </div>
     `;
@@ -101,7 +105,7 @@ function exibirProdutosSacola() {
   document.querySelectorAll('.comprar').forEach(botao => {
     botao.addEventListener('click', () => {
       const index = botao.dataset.index;
-      alert(`Comprando ${sacola[index].nome}`);
+      alert(`Comprar ${sacola[index].nome}`);
     });
   });
 
