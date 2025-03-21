@@ -11,8 +11,19 @@ body{
 }
  
 @font-face {
+    font-family: 'DESIGNER';
+    src: url('../designer/DESIGNER.otf.otf') 
+    format('opentype');
+    font-weight: normal;
+    font-size:3rem;
+}
+
+@font-face {
     font-family: 'Vortigra';
-    src: url('Vortigra') format('opentype'), url('Vortigra') format('truetype');
+    src: url('../vortigra/Vortigra.otf.otf') 
+    format('opentype');
+    font-weight: normal;
+    font-size:3rem;
 }
 
 /*Header*/
@@ -108,7 +119,7 @@ body{
 }
 
 .logo{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'DESIGNER';
     color:#0279db;
 }
 
@@ -870,12 +881,12 @@ padding: 10px;
 }
 
 .typing-text {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     margin-bottom: 1.9rem;
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Vortigra';
     border: 10px 10px #000b1b;
     color: #050031;
-    font-weight:200;
+    
     max-width: 1080px;
     min-width: -900px;
     
