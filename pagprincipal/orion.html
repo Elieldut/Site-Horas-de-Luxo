@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../HRL.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/globals.css">
+    <title>Horas de Luxo</title>
+</head>
+<body class="bw99">
+    
+        <style>
+                      * {
+               
+               box-sizing: border-box;
+               font-family: Arial, sans-serif;
+           }
+           body {
+               background-color: #000000;
+               
+           }
+           .navbar {
+               background: #222222;
+               padding: 15px;
+               color: white;
+               text-align: center;
+               font-size: 20px;
+           }
+           .container {
+            
+               background: rgb(255, 255, 255);
+               border-top-right-radius: 10px;
+               border-top-left-radius: 10px;
+               border-bottom-left-radius:10px;
+               border-bottom-right-radius: 10px;
+               overflow: hidden ;
+               box-shadow:-0.11px 1px 1px 1px #ffffff;
+              
+           }
+
+           @media (min-width:200px) {
+               .container{
+                   margin-left: 20px;
+                   margin-right: 20px;
+                   
+               }
+
+               .variations{
+                   margin-top: -7%;
+                   margin-left: -0.3%;
+               }
+
+               footer {
+            
+                height: 143px;
+                background-color: #333;
+                color: #fff;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;      
+            }
+
+            h6{
+                text-align: center;
+                padding-top: 43px;
+                font-size: 1rem;
+                font-weight: bolder;
+            }
+                footer img{
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 23px;
+                }
+
+               .ul,li{
+                margin-left: 560px;
+                   margin-right: 560px;
+               }
+
+               .description, h3, p{
+                   text-align:left;
+                   padding: 10px;
+                   padding-left: 29.5%;
+                   padding-right: 29.5%;
+               }
+
+               .product-price{
+                   margin-left: -29.4%;
+                   padding-bottom: -120px;
+               }
+
+               .product-section, main {
+                   flex-direction: column;
+                   align-items: center;
+               }
+               .product-details, .image-slider {
+                   width: 40%;
+               }
+
+
+           
+           }
+           
+           .product-section {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 20px;
+               padding: 10px;
+           }
+           .image-slider {
+               position: relative;
+               flex: 1 1 45%;
+           }
+           .product-img {
+               width: 100%;
+               border-radius: 10px;
+               display: none;
+           }
+           .product-img.active {
+               display: block;
+           }
+
+        
+
+           h2,h3,p{
+               margin-left: 10px;
+               margin-top: 15px;
+               margin-bottom: 15px;
+           }
+
+           .prev, .next {
+               position: absolute;
+               top: 50%;
+               transform: translateY(-50%);
+               background: rgb(0, 0, 0);
+               color: rgb(255, 255, 255);
+               padding: 10px;
+               cursor: pointer;
+               border-radius: 9999px;
+               
+               
+           }
+           .prev { left: 10px; }
+           .next { right: 10px; }
+           
+           .product-details {
+               flex: 1 1 45%;     
+           }
+           .product-title {
+               font-size: 24px;
+               margin-bottom: 10px;
+           }
+           .product-price {
+               color: #27ae60;
+               font-size: 25px;
+               margin-bottom: 10px;
+               padding-bottom: 10%;
+           }
+           .variations {
+               margin-bottom: 20px;
+               padding: 1px;
+           }
+           .buy-button {
+               display: inline-block;
+               background: #27ae60;
+               color: white;
+               padding: 10px 20px;
+               text-decoration: none;
+               border-radius: 5px;
+               font-size: 18px;
+           }
+           .buy-button:hover {
+               background: #219150;
+           }
+
+           h2{
+               margin-top: 1px;
+               display: block;
+               text-align: left;
+           }
+
+           .h3{
+            margin-bottom: -2%;
+           }
+
+           .related-list {
+               display: flex;
+               gap: 10px;
+               overflow-x: auto;
+           }
+           .related-item {
+               background: white;
+               padding: 10px;
+               border-radius: 10px;
+               text-align: center;
+               width: 150px;
+           }
+
+           @media (max-width: 768px) {
+               .product-section {
+                   flex-direction: column;
+                   align-items: center;
+               }
+
+               .variations{
+                   margin-top: -8%;
+                   margin-left: -1%;
+               }
+
+               footer {
+                    
+                    height: 113px;
+                    background-color: #333;
+                    color: #fff;
+                    text-align: center;
+                    margin-top: auto; /* Empurra o footer para a parte inferior */
+                }
+            footer img{
+                align-items: center;
+                display: block;
+                text-align: center;
+                width: 23px;
+                
+            }
+
+               li{
+                margin-left: 10%;
+                margin-right: 10%;
+               }
+
+               .product-price{
+                   margin-left: -2.4%;
+               }
+
+               .description, h3, p{
+                   margin: auto;
+                   padding-left: 3%;
+                   padding-right: 3%;
+               }
+
+               .variations{
+                   margin-top: 3%;
+                   padding: 5px;
+               }
+
+               .product-details, .image-slider {
+                   width: 100%;
+               }
+           }
+
+        
+           .back{
+               font-size: 2rem;
+           }
+
+           
+
+           a:hover{
+               color: #dfdfdf;
+               flex-direction: column-reverse;
+              
+           
+           }
+
+   
+
+          main{
+           background-color: #444444;
+          }
+          
+
+          a{
+           text-decoration: none;
+           cursor: pointer ;
+           color: #ffffff;
+           transform: translateY(-10px);
+           transition:1ms;
+           
+          }
+
+        .variat{
+            margin-top: -4%;
+            text-align: left;
+    
+        }
+
+   
+
+          main{
+           background-color: #444444;
+          }
+          
+          
+
+          a{
+           text-decoration: none;
+           cursor: pointer ;
+           color: #ffffff;
+           transform: translateY(-10px);
+           transition:1ms;
+           
+          }
+        </style>
+    </head>
+    <body>
+        <div class="navbar"><h1 class="logo"><span>Horas </span><spa>de Luxo</spa><div class="back"><a class="back" href="../index.html">⇦</a></div></h1>
+        </div>
+        
+        
+        <main>
+            <div class="container">
+                <div class="product-section">
+                    <div class="image-slider">
+                        <img src="../ÓRIONAMOLED.1.jpg" alt="Produto 1" class="product-img active">
+
+                        <img src="../ÓRIONAMOLED.2.jpg" alt="Produto 2" class="product-img">
+
+                        <img src="../ÓRIONAMOLED.3.jpg" alt="Produto 3" class="product-img">
+
+                        <img src="../ÓRIONAMOLED.4.jpg" alt="Produto 4" class="product-img">
+
+                        <img src="../ÓRIONAMOLED.5.jpg" alt="Produto 5" class="product-img">
+
+                        <img src="../ÓRIONAMOLED.6.jpg" alt="Produto 6" class="product-img">
+
+                        <img src="../ÓRIONAMOLED.7.jpg" alt="Produto 7" class="product-img">
+
+                        <img src="../ÓRIONAMOLED.8.jpg" alt="Produto 8" class="product-img">
+
+                        <img src="../ÓRIONAMOLED.9.jpg" alt="Produto 9" class="product-img">
+
+                        <img src="../ÓRIONAMOLED.10.jpg" alt="Produto 10" class="product-img">
+
+                        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                        <button class="next" onclick="changeImage(1)">&#10095;</button>
+                    </div>
+                    <div class="product-details">
+                        <h1 class="product-title">MODELO: ÓRION / AMOLED</h1>
+                        <p class="product-price">R$ 509,50 </p>
+                        <div class="variations">
+                            <br>
+                            <h4 class="variat">Cor do Smartwatch:</h4>
+                                <br>
+                            <select>
+                                <option>Dourado</option>
+                                <option>Prata</option>
+                            </select>
+                        </div>
+                        <a href="../Cheackout/tescheck.html" class="buy-button">Comprar Agora</a>
+                    </div>
+                </div>
+                
+                    <div>
+                        <div>
+                            <h2 class="description"><ins>Descrição do Produto</ins></h2>
+                            <p >
+                                Um smartwatch inovador, ÓRION redefine o conceito de praticidade e sofisticação, oferecendo uma combinação perfeita de tecnologia, estilo e funcionalidades avançadas. Com sensores de alta performance fazendo dele indispensável no seu dia-a-dia. Com GPS integrado e conexão com os principais apps de atividade físicas STRAVA E GOOGLE FIT, conta com uma tela AMOLED de cores surpreendentes. E uma experiencia única trazendo Alexa integrada e muito mais.
+                            </p>
+                                <h3 class="h3">Informações Principais:</h3>
+                                
+                                <p>
+                                    
+                                    <p>➣Recebe notificações;</p>
+                                    
+                                    <p>➣Ciclo feminino;</p>
+                                    
+                                    <p>
+                                        ➣ Modos esporte;
+                                    </p>
+
+                                    <p>➣Monitoramento de sono;</p>
+                                    
+                                    <p>➣Medição única; </p>
+                                    
+                                    <p>
+                                        ➣Energia corporal;
+                                        
+                                    </p>
+                                    <p>➣Frequência cardíaca;</p>
+
+                                    <p>➣Monitoramento de oxigênio do Sangue;</p>
+                                    
+                                        <p>
+                                            ➣Monitoramento de stress;
+                                        </p>
+                                    
+                                    
+                                        <p>
+                                            ➣Altímetro ;
+                                        </p>
+                                        
+                                        <p>➣Bússola;</p>
+
+                                        <p>➣Controle de câmera remoto;</p>
+
+                                        <p>➣Controle de música;</p>
+
+                                        <p>➣Certificação IP68;</p>
+
+                                        <p>➣Bateria de até 10 dias dependendo do uso;</p>
+
+                                        <p>➣Girar o pulso para ligar a tela;</p>
+
+                                        <p>➣Diversos idiomas, incluindo Português;</p>
+
+                                        <p>➣Previsão do tempo com localização;</p>
+
+                                        <h3 class="h3">Outras características do modelo:</h3>
+                                    
+                                        <p>➣Fabricante: WEARZONE;</p>
+
+                                    <p>➣Aplicativo: VeryFit;</p>
+                                    
+                                    <p>➣CPU: ATS3085C;</p>
+                                    
+                                    <p>➣Tela: 1.32" 466*466 AMOLED;</p>
+                                
+                                    <p>➣Carregamento: magnético ;</p>
+
+                                    <p>➣Resistência à água: IP 68;</p>
+
+                                    <p>➣Bateria : 300 mAh;</p>
+
+                                    <p>➣Peso bruto do produto: 37,05g;</p>
+
+                        </div>
+            <script>
+                let currentImageIndex = 0;
+                const images = document.querySelectorAll('.product-img');
+                function changeImage(step) {
+                    images[currentImageIndex].classList.remove('active');
+                    currentImageIndex = (currentImageIndex + step + images.length) % images.length;
+                    images[currentImageIndex].classList.add('active');
+                }
+            </script> 
+            <br>
+            <footer>
+                <div>
+                    <h6>&copy; 2025 SITE VERIFICADO.</h6><p> <img src="../simbolo-do-google.png" width="70px"></p>
+                    
+                        
+                </div>
+            </footer>
+                <script>
+            const navbar = document.querySelector(".navbar");
+            const menuButton = document.querySelector(".menu-button");
+            menuButton.addEventListener('click', () => {
+                navbar.classList.toggle("show-menu");
+            });
+                </script>
+            
+        </main>
+
+</body>
+</html>
