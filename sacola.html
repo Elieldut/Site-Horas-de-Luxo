@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Site-Horas-de-Luxo/styles/globals.css">
+    <title>Sacola de Compras</title>
+    <style>
+       /* sacola.html */
+#produtos-sacola {
+  margin-top: 20px;
+}
+
+.produto-sacola {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.produto-sacola button {
+  margin-left: 10px;
+}
+
+            h1{
+             margin-top: 1px;
+               display: block;
+               text-align: center;
+            }
+
+           h2{
+            text-align: center;
+            font-size: 1.8rem;
+            text-decoration: underline;
+           }
+            logo{
+            text-align: center;
+
+            }
+
+            .navbar {
+               background: #222222;
+               padding: 15px;
+               color: white;
+               text-align: center;
+               font-size: 20px;
+           }
+           a{
+            color: white;
+           }
+    </style>
+</head>
+<body>
+    <div class="navbar"><h1 class="logo"><span>HORAS </span><spa>DE LUXO</spa><div class="back"><a class="back" href="../Site-Horas-de-Luxo/index.html">⇦</a></div></h1>
+        </div>
+        <br>
+        <br>
+    <h2>Sacola de Compras</h2>
+    <div id="produtos-sacola">
+        </div>
+
+    <script>
+        // sacola.html
+const produtosSacola = document.getElementById('produtos-sacola');
+const sacola = JSON.parse(localStorage.getItem('sacola')) || [];
+
+function exibirProdutosSacola() {
+  produtosSacola.innerHTML = '';
+  sacola.forEach((produto, index) => {
+    const produtoElement = document.createElement('div');
+    produtoElement.classList.add('produto-sacola');
+    produtoElement.innerHTML = `
+      <div>
+        <h3>${produto.nome}</h3>
+        <p>Preço: R$ ${produto.preco}</p>
+      </div>
+      <div>
+        <button class="comprar" data-index="${index}">Comprar</button>
+        <button class="remover" data-index="${index}">Remover</button>
+      </div>
+    `;
+    produtosSacola.appendChild(produtoElement);
+  });
+
+  // Adicionar eventos aos botões
+  document.querySelectorAll('.comprar').forEach(botao => {
+    botao.addEventListener('click', () => {
+      const index = botao.dataset.index;
+      alert(`Comprando ${sacola[index].nome}`);
+    });
+  });
+
+  document.querySelectorAll('.remover').forEach(botao => {
+    botao.addEventListener('click', () => {
+      const index = botao.dataset.index;
+      sacola.splice(index, 1);
+      localStorage.setItem('sacola', JSON.stringify(sacola));
+      exibirProdutosSacola();
+    });
+  });
+}
+
+exibirProdutosSacola();
+    </script>
+</body>
+</html>

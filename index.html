@@ -62,7 +62,11 @@
         </ul>
     </nav>
     <div class="nav-icon-container">
-        <img src="bag-icon-basket-icon-buy-icon-png-clipart-removebg-preview.png" alt="bag" width="210px">
+        <a href="sacola.html" >
+            <img src="bag-icon-basket-icon-buy-icon-png-clipart-removebg-preview.png" alt="bag" width="210px">
+            <span class="quantidade-sacola">0</span>
+          </a>
+        
         <img src="hamburger-removebg-preview.png" alt="hamburger" class="menu-button">
     </div>
   </div>
@@ -182,6 +186,9 @@
                             <p class="product-name">MODELO: W99+</p>
                         </a>
                             <p class="rate"><spann>&#9733;&#9733;&#9733;&#9733;&#9733;</spann></p>
+                        
+                            <button class="adicionar-sacola" data-id="1" data-nome="W99+" data-preco="R$ 226,80">Adicionar à Sacola</button>
+
                             <p class="product-price"></p>
                         
                     </div>
@@ -409,5 +416,37 @@ escreverTexto();
 }
     </script>
     
+    <script>
+        
+// index.html
+const botoesAdicionarSacola = document.querySelectorAll('.adicionar-sacola');
+const quantidadeSacola = document.querySelector('.quantidade-sacola');
+let sacola = JSON.parse(localStorage.getItem('sacola')) || [];
+
+function atualizarSacola() {
+  quantidadeSacola.textContent = sacola.length;
+}
+
+atualizarSacola();
+
+botoesAdicionarSacola.forEach(botao => {
+  botao.addEventListener('click', () => {
+    const produto = {
+      id: botao.dataset.id,
+      nome: botao.dataset.nome,
+      preco: botao.dataset.preco
+    };
+    sacola.push(produto);
+    localStorage.setItem('sacola', JSON.stringify(sacola));
+    atualizarSacola();
+  });
+});
+
+document.querySelector('.sacola').addEventListener('click', (event) => {
+  event.preventDefault();
+  window.location.href = '/sacola.html';
+});
+    </script>
+
 </body>
 </html>
