@@ -28,7 +28,9 @@
                     <a href="Categorias/Microwear.html">Microwear</a>
                     <a href="Categorias/WearZone.html">WearZone</a>
                     <a href="Categorias/Mibro.html">Mibro</a>
-    
+
+                    
+
                 </div>
             </div>
     <!-- No use config of search
@@ -300,9 +302,29 @@
             <div class="header-button-side exclusive-container">
                 <div class="header-button-side-left">
                     <h2>SmatWatch</h2>
-                    <p>
-                        O smartwatch é, sem dúvida, uma das inovações tecnológicas mais empolgantes da última década. Muito mais do que um simples relógio, ele é uma verdadeira extensão do smartphone, proporcionando uma experiência completa de conectividade, funcionalidade e praticidade
-                    </p>
+                    <br>
+                    <br>
+                    <div class="bloco-digitacao">
+                        <p class="texto-digitado"></p>
+                    </div>
+                    <script>
+                        const elementoTexto = document.querySelector('.texto-digitado');
+const textoCompleto = "O smartwatch é, sem dúvida, uma das inovações tecnológicas mais empolgantes da última década. Muito mais do que um simples relógio, ele é uma verdadeira extensão do smartphone, proporcionando uma experiência completa de conectividade, funcionalidade e praticidade.";
+let indiceAtual = 0;
+let velocidadeDigitacao = 70;
+
+function escreverTexto() {
+    if (indiceAtual < textoCompleto.length) {
+        elementoTexto.innerHTML += textoCompleto.charAt(indiceAtual);
+        indiceAtual++;
+        setTimeout(escreverTexto, velocidadeDigitacao);
+    } else {
+        elementoTexto.style.borderRight = 'none';
+    }
+}
+
+escreverTexto();
+                    </script>
                     </div>
                     <div class="header-button-side-right">
     
