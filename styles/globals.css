@@ -26,6 +26,13 @@ body{
     font-size:3rem;
 }
 
+@font-face {
+    font-family: 'ASOKA';
+    src: url('../asoka/ASOKA.otf') 
+    format('opentype');
+
+}
+
 /*Header*/
 
 .header-inner-content{
@@ -881,12 +888,12 @@ padding: 10px;
 }
 
 .typing-text {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 1.9rem;
-    font-family:'Vortigra';
+    font-family:'ASOKA';
     border: 10px 10px #000b1b;
     color: #050031;
-    
+    font-weight:550;
     max-width: 1080px;
     min-width: -900px;
     
