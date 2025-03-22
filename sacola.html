@@ -84,39 +84,81 @@ const produtosSacola = document.getElementById('produtos-sacola');
 const sacola = JSON.parse(localStorage.getItem('sacola')) || [];
 
 function exibirProdutosSacola() {
-  produtosSacola.innerHTML = '';
-  sacola.forEach((produto, index) => {
-    const produtoElement = document.createElement('div');
-    produtoElement.classList.add('produto-sacola');
-    produtoElement.innerHTML = `
-      <div>
-        <h3>${produto.nome}</h3>
-        <p>Preço: R$ ${produto.preco}</p>
-      </div>
-      <div>
-        <button class="comprar" data-index="${index}"><a href="../Site-Horas-de-Luxo/pagprincipal/w99.html">Comprar</a></button>
-        <button class="remover" data-index="${index}">Remover</button>
-      </div>
-    `;
-    produtosSacola.appendChild(produtoElement);
-  });
-
-  // Adicionar eventos aos botões
-  document.querySelectorAll('.comprar').forEach(botao => {
-    botao.addEventListener('click', () => {
-      const index = botao.dataset.index;
-      alert(`Comprar ${sacola[index].nome}`);
+    produtosSacola.innerHTML = '';
+    sacola.forEach((produto, index) => {
+        const produtoElement = document.createElement('div');
+        produtoElement.classList.add('produto-sacola');
+        produtoElement.innerHTML = `
+            <div>
+                <h3>${produto.nome}</h3>
+                <p>Preço: ${produto.preco}</p>
+            </div>
+            <div>
+                <button class="comprar" data-id="${produto.id}">Comprar</button>
+                <button class="remover" data-index="${index}">Remover</button>
+            </div>
+        `;
+        produtosSacola.appendChild(produtoElement);
     });
-  });
 
-  document.querySelectorAll('.remover').forEach(botao => {
-    botao.addEventListener('click', () => {
-      const index = botao.dataset.index;
-      sacola.splice(index, 1);
-      localStorage.setItem('sacola', JSON.stringify(sacola));
-      exibirProdutosSacola();
+    // Adicionar eventos aos botões
+    document.querySelectorAll('.comprar').forEach(botao => {
+        botao.addEventListener('click', () => {
+            const id = botao.dataset.id;
+            let link = '';
+            switch (id) {
+                case '1':
+                    link = '../Site-Horas-de-Luxo/pagprincipal/w99.html';
+                    break;
+                case '2':
+                    link = '../Site-Horas-de-Luxo/pagprincipal/ULTRA9MAX.html';
+                    break;
+                case '3':
+                    link = '../Site-Horas-de-Luxo/pagprincipal/W10 PRO MINI.html';
+                    break;
+                case '4':
+                    link = '../Site-Horas-de-Luxo/pagprincipal/ULTRA 2 MAX.html';
+                    break;
+                case '5':
+                    link = '../Site-Horas-de-Luxo/pagprincipal/S10MICROWEAR.html';
+                    break;
+                case '6':
+                    link = '../Site-Horas-de-Luxo/pagprincipal/ROYALS.html';
+                    break;
+                case '7':
+                    link = '../Site-Horas-de-Luxo/pagprincipal/N10ULTRA.html';
+                    break;
+                case '8':
+                    link = '../Site-Horas-de-Luxo/pagprincipal/M9ULTRAMINI.html';
+                    break;
+                case '9':
+                    link = '../Site-Horas-de-Luxo/pagprincipal/WS-79.html';
+                    break;
+                case '10':
+                    link = '../Site-Horas-de-Luxo/pagprincipal/HORIZONLITE.html';
+                    break;
+                case '11':
+                    link = '../Site-Horas-de-Luxo/pagprincipal/GS10ULTRAMINI.html';
+                    break;
+                case '12':
+                    link = '../Site-Horas-de-Luxo/pagprincipal/ULTRAAI3.html';
+                    break;
+                // Adicione mais casos para outros produtos
+                default:
+                    link = '#'; // Página padrão ou erro
+            }
+            window.location.href = link;
+        });
     });
-  });
+
+    document.querySelectorAll('.remover').forEach(botao => {
+        botao.addEventListener('click', () => {
+            const index = botao.dataset.index;
+            sacola.splice(index, 1);
+            localStorage.setItem('sacola', JSON.stringify(sacola));
+            exibirProdutosSacola();
+        });
+    });
 }
 
 exibirProdutosSacola();
