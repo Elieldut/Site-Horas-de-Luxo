@@ -3,27 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout Tecnológico</title>
+    <title>Formulário de Endereço</title>
+    <link rel="stylesheet" href="../styles/globals.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    
-    <div class="checkout-container">
-        <h1>Pagamento</h1>
-        <div class="payment-options">
-            <button id="credit-card-btn" class="option-btn">
-                <i class="fas fa-credit-card"></i> Cartão
-            </button>
-            <button id="pix-btn" class="option-btn">
-                <i class="fas fa-qrcode"></i> PIX
-            </button>
-        </div>
-        <div id="payment-details" class="payment-details">
+    <div class="container">
+        <form id="address-form">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome">
             </div>
-        <button id="confirm-payment" class="confirm-btn">
-            <i class="fas fa-lock"></i> Confirmar Pagamento
-        </button>
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(DD) X-XXXX-XXXX">
+            </div>
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <div class="cep-input">
+                    <input type="text" id="cep" name="cep">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco">
+            </div>
+            <div class="form-group">
+                <label for="numero">Número</label>
+                <div class="numero-input">
+                    <input type="number" id="numero" name="numero" placeholder="Ex.: 01">
+                    <label class="sem-numero">
+                        <input type="checkbox" name="sem-numero"> Sem número
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="complemento">Complemento</label>
+                <input type="text" id="complemento" name="complemento" placeholder="Apartamento, casa, lote, etc...">
+            </div>
+            <div class="form-group">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro">
+            </div>
+            <div class="form-group">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" name="cidade">
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" name="estado">
+            </div>
+            <div class="form-group">
+                <label for="referencia">Ponto de Referência</label>
+                <input type="text" id="referencia" name="referencia" placeholder="Ex.: Próximo ao Museu do Ipiranga">
+            </div>
+            <button type="submit" class="submit-button"><a href="paga.html">Enviar</a></button>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>
